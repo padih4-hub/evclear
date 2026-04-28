@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVClear — Article</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  :root {
+    --neon: #a8ff78;
+    --dark: #0d0f0c;
+    --dark2: #141714;
+    --dark3: #1a1e19;
+    --card: #181c17;
+    --border: rgba(168,255,120,0.12);
+    --text: #e8ede6;
+    --muted: #7a8a76;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--dark); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; background: rgba(13,15,12,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.35rem; color: var(--white); text-decoration: none; }
+  .logo span { color: var(--neon); }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--neon); }
+  .nav-cta { background: var(--neon) !important; color: var(--dark) !important; padding: 8px 20px; border-radius: 6px; font-weight: 500 !important; }
+
+  .article-hero { padding: 120px 48px 60px; max-width: 860px; margin: 0 auto; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--neon); text-decoration: none; font-size: 0.85rem; margin-bottom: 32px; transition: opacity 0.2s; }
+  .back-link:hover { opacity: 0.7; }
+  .article-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--neon); font-weight: 500; margin-bottom: 16px; }
+  .article-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3.2rem); color: var(--white); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 24px; }
+  .article-meta { display: flex; align-items: center; gap: 24px; color: var(--muted); font-size: 0.85rem; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+  .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+  .article-featured-img { width: 100%; max-width: 860px; margin: 0 auto 48px; padding: 0 48px; }
+  .article-featured-img img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; }
+
+  .article-body { max-width: 720px; margin: 0 auto; padding: 0 48px 100px; }
+  .article-content h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--white); letter-spacing: -0.5px; margin: 48px 0 16px; }
+  .article-content h3 { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 1.2rem; color: var(--white); margin: 32px 0 12px; }
+  .article-content p { color: var(--text); margin-bottom: 20px; font-size: 1.05rem; line-height: 1.85; }
+  .article-content ul, .article-content ol { margin: 0 0 24px 24px; }
+  .article-content li { color: var(--text); margin-bottom: 8px; font-size: 1.05rem; line-height: 1.75; }
+  .article-content strong { color: var(--white); font-weight: 500; }
+  .article-content a { color: var(--neon); text-decoration: none; border-bottom: 1px solid rgba(168,255,120,0.3); }
+  .article-content a:hover { border-color: var(--neon); }
+  .article-content blockquote { border-left: 3px solid var(--neon); padding: 16px 24px; margin: 32px 0; background: var(--dark2); border-radius: 0 8px 8px 0; }
+  .article-content blockquote p { color: var(--muted); margin: 0; }
+  .article-content hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  .article-cta { background: var(--dark2); border: 1px solid var(--border); border-radius: 12px; padding: 40px; margin: 48px 0; text-align: center; }
+  .article-cta h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--white); margin-bottom: 12px; }
+  .article-cta p { color: var(--muted); margin-bottom: 24px; }
+  .article-cta a { background: var(--neon); color: var(--dark); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; }
+
+  footer { padding: 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  footer p { font-size: 0.82rem; color: var(--muted); }
+
+  #loading { text-align: center; padding: 200px 48px; color: var(--muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .article-hero { padding: 100px 24px 40px; }
+    .article-body { padding: 0 24px 60px; }
+    .article-featured-img { padding: 0 24px; }
+    .article-featured-img img { height: 240px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">EV<span>Clear</span></a>
+  <ul class="nav-links">
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/#guides">EV Guides</a></li>
+    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#newsletter" class="nav-cta">Free EV Guide →</a></li>
+  </ul>
+</nav>
+
+<div id="loading">Loading article...</div>
+
+<div id="article-container" style="display:none">
+  <div class="article-hero">
+    <a href="/" class="back-link">← Back to EVClear</a>
+    <div id="article-tag" class="article-tag"></div>
+    <h1 id="article-title" class="article-title"></h1>
+    <div class="article-meta">
+      <span id="article-date"></span>
+      <span id="article-readtime"></span>
+    </div>
+  </div>
+
+  <div id="article-img-container" class="article-featured-img" style="display:none">
+    <img id="article-img" src="" alt="">
+  </div>
+
+  <div class="article-body">
+    <div id="article-content" class="article-content"></div>
+
+    <div class="article-cta">
+      <h3>Ready to buy your first EV?</h3>
+      <p>Get our complete Australian EV Buyer's Guide — everything you need before stepping into a dealership.</p>
+      <a href="https://buy.stripe.com/3cIeVc7kM6TG5oagbLfjG00">Get the Guide — A$27 →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 EVClear. All rights reserved.</p>
+  <p>Made for 🇦🇺 Australian EV buyers</p>
+</footer>
+
+<script>
+  // Get the post slug from the URL
+  const path = window.location.pathname;
+  const slug = path.split('/posts/')[1]?.replace(/\/$/, '') || '';
+
+  // Fetch the markdown file
+  async function loadPost() {
+    try {
+      const response = await fetch(`/posts/${slug}.md`);
+      if (!response.ok) throw new Error('Post not found');
+      const text = await response.text();
+      
+      // Parse frontmatter
+      const frontmatterMatch = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+      if (!frontmatterMatch) throw new Error('Invalid post format');
+      
+      const frontmatter = frontmatterMatch[1];
+      const content = frontmatterMatch[2];
+      
+      // Extract fields
+      const title = frontmatter.match(/title:\s*"?([^"\n]+)"?/)?.[1] || '';
+      const date = frontmatter.match(/date:\s*([^\n]+)/)?.[1] || '';
+      const category = frontmatter.match(/category:\s*"?([^"\n]+)"?/)?.[1] || '';
+      const image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
+      const readtime = frontmatter.match(/readtime:\s*"?([^"\n]+)"?/)?.[1] || '5 min read';
+      
+      // Format date
+      const dateObj = new Date(date);
+      const formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+      
+      // Update page
+      document.title = `${title} — EVClear`;
+      document.getElementById('article-title').textContent = title;
+      document.getElementById('article-tag').textContent = category;
+      document.getElementById('article-date').textContent = formattedDate;
+      document.getElementById('article-readtime').textContent = readtime;
+      
+      if (image) {
+        document.getElementById('article-img').src = image;
+        document.getElementById('article-img').alt = title;
+        document.getElementById('article-img-container').style.display = 'block';
+      }
+      
+      // Render markdown
+      document.getElementById('article-content').innerHTML = marked.parse(content);
+      
+      // Show article
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('article-container').style.display = 'block';
+      
+    } catch (error) {
+      document.getElementById('loading').innerHTML = '<h2 style="color:var(--white)">Article not found</h2><p>This article may have moved. <a href="/" style="color:var(--neon)">Return to EVClear →</a></p>';
+    }
+  }
+
+  loadPost();
+
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
