@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: padih4-hub/evclear
+  name: git-gateway
   branch: main
 
 media_folder: "static/images"
