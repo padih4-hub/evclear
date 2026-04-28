@@ -1,5 +1,5 @@
 ---
-title: "Are Electric Vehicles Worth It in Australia? A Honest 2026 Breakdown"
+title: "Are Electric Vehicles Worth It in Australia? An Honest 2026 Breakdown"
 date: 2026-04-28T09:33:00.000Z
 category: "Buying Guide"
 excerpt: "EVs are no longer a niche choice in Australia. But are they worth it for you? We cut through the noise with a honest breakdown of costs, savings, and real world ownership."
