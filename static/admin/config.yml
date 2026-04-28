@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: padih4-hub/evclear
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Buying Guide", "Charging", "Incentives", "EV News", "Cost & Savings", "EV Models"]}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Read Time", name: "readtime", widget: "string", default: "5 min read"}
+      - {label: "Body", name: "body", widget: "markdown"}
