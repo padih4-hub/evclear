@@ -2,7 +2,7 @@
 title: Every Government EV Rebate and Incentive in Australia — 2026 Guide
 date: 2026-04-29T09:12:55.255Z
 category: Incentives
-image: ""
+image: /images/ev-night-charging.jpg
 excerpt: State rebates have changed a lot in the last two years. Here's exactly
   what's available right now, state by state, and how to claim it before it
   disappears.
