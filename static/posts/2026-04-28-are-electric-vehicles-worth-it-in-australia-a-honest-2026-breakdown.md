@@ -1,11 +1,12 @@
 ---
-title: "Are Electric Vehicles Worth It in Australia? An Honest 2026 Breakdown"
+title: Are Electric Vehicles Worth It in Australia? An Honest 2026 Breakdown
 date: 2026-04-28T09:33:00.000Z
-category: "Buying Guide"
-excerpt: "EVs are no longer a niche choice in Australia. But are they worth it for you? We cut through the noise with a honest breakdown of costs, savings, and real world ownership."
-readtime: "5 min read"
+category: Buying Guide
+excerpt: EVs are no longer a niche choice in Australia. But are they worth it
+  for you? We cut through the noise with a honest breakdown of costs, savings,
+  and real world ownership.
+readtime: 5 min read
 ---
-
 Let's be real — not everyone needs an EV right now. And that's okay. But if you're reading this, chances are you're at least curious. So let's cut through the noise and figure out if switching to electric actually makes sense for your life.
 
 The good news? For most Australians living in cities and suburbs, it absolutely does. The bad news? There are still a few situations where you're better off waiting. Let's break it down.
