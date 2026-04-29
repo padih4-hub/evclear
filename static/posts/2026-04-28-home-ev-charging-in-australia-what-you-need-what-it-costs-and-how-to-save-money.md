@@ -3,6 +3,7 @@ title: "Home EV Charging in Australia: What You Need, What It Costs and How to
   Save Money"
 date: 2026-04-28T20:28:38.456Z
 category: Charging
+image: /images/ev-charging.jpg
 excerpt: Home charging is simpler than most people think. Here's exactly what
   you need, what it costs to install, and how to cut your charging bill down to
   almost nothing.
