@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EV Savings Calculator — EVClear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --neon: #39FF14;
+    --neon-dim: rgba(57,255,20,0.12);
+    --neon-glow: rgba(57,255,20,0.25);
+    --bg: #080808;
+    --dark1: #0f0f0f;
+    --dark2: #141414;
+    --dark3: #1a1a1a;
+    --card: #111111;
+    --border: #222222;
+    --white: #ffffff;
+    --muted: #666666;
+    --body: #aaaaaa;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grid bg */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(57,255,20,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(57,255,20,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+    background: rgba(8,8,8,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--neon); }
+  .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--neon); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 1;
+    padding: 140px 40px 60px;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--neon-dim);
+    border: 1px solid rgba(57,255,20,0.2);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--neon);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--neon); }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: var(--body);
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* CALCULATOR WRAPPER */
+  .calc-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
+  }
+
+  /* STEPS */
+  .steps {
+    display: flex;
+    gap: 0;
+    margin-bottom: 32px;
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .step {
+    flex: 1;
+    padding: 14px 8px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--muted);
+    border-right: 1px solid var(--border);
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .step:last-child { border-right: none; }
+  .step.active { background: var(--neon-dim); color: var(--neon); }
+  .step.done { color: var(--neon); opacity: 0.5; }
+  .step-num { display: block; font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800; margin-bottom: 2px; }
+
+  /* CARD */
+  .calc-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .calc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon), transparent);
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+
+  .section-sub {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  /* FORM ELEMENTS */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-grid.full { grid-template-columns: 1fr; }
+
+  .field { display: flex; flex-direction: column; gap: 8px; }
+
+  label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--body);
+    letter-spacing: 0.02em;
+  }
+
+  select, input[type="number"], input[type="email"] {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    appearance: none;
+  }
+
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+
+  select:focus, input:focus {
+    border-color: var(--neon);
+    box-shadow: 0 0 0 3px var(--neon-dim);
+  }
+
+  select option { background: var(--dark2); }
+
+  /* TOGGLE */
+  .toggle-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .toggle-btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 10px 12px;
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+
+  .toggle-btn.active {
+    background: var(--neon-dim);
+    border-color: var(--neon);
+    color: var(--neon);
+    font-weight: 500;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+  }
+
+  /* BUTTONS */
+  .btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: var(--neon);
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary:hover {
+    background: #4fff25;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px var(--neon-glow);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--body); color: var(--white); }
+
+  /* RESULTS */
+  .results-section { display: none; }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .result-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .result-card.highlight {
+    background: var(--neon-dim);
+    border-color: rgba(57,255,20,0.3);
+  }
+
+  .result-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+
+  .result-value {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--white);
+  }
+
+  .result-card.highlight .result-value { color: var(--neon); }
+
+  .result-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* BREAKDOWN TABLE */
+  .breakdown {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  .breakdown-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    align-items: center;
+  }
+
+  .breakdown-row:last-child { border-bottom: none; }
+
+  .breakdown-row.header {
+    background: var(--dark3);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .breakdown-row .label { color: var(--body); }
+  .breakdown-row .ev-val { color: var(--neon); font-weight: 500; }
+  .breakdown-row .petrol-val { color: var(--muted); }
+
+  .breakdown-row.total-row {
+    background: rgba(57,255,20,0.04);
+    font-weight: 600;
+  }
+
+  /* GATE */
+  .gate-overlay {
+    background: linear-gradient(to bottom, transparent, var(--card) 40%);
+    position: relative;
+    margin-top: -60px;
+    padding-top: 80px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .gate-box {
+    background: var(--dark2);
+    border: 1px solid rgba(57,255,20,0.25);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .gate-icon { font-size: 2rem; margin-bottom: 12px; }
+
+  .gate-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .gate-sub {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .gate-form { display: flex; flex-direction: column; gap: 12px; }
+
+  .gate-note {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  /* FULL RESULTS (post email) */
+  .full-results { display: none; }
+
+  .breakeven-bar {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+
+  .breakeven-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+
+  .bar-track {
+    height: 8px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--neon);
+    border-radius: 100px;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    width: 0%;
+  }
+
+  .bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .incentives-box {
+    background: var(--neon-dim);
+    border: 1px solid rgba(57,255,20,0.2);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+
+  .incentives-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--neon);
+    margin-bottom: 12px;
+  }
+
+  .incentive-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(57,255,20,0.1);
+    color: var(--body);
+  }
+
+  .incentive-item:last-child { border-bottom: none; }
+  .incentive-item strong { color: var(--neon); }
+
+  .guide-cta {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .guide-cta-text h4 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .guide-cta-text p { font-size: 0.83rem; color: var(--muted); }
+
+  .btn-guide {
+    white-space: nowrap;
+    padding: 12px 20px;
+    background: var(--neon);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn-guide:hover { background: #4fff25; transform: translateY(-1px); }
+
+  /* HIDDEN */
+  .hidden { display: none !important; }
+
+  /* SCREEN PANELS */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--neon); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 20px; }
+    .hero { padding: 120px 20px 40px; }
+    .calc-card { padding: 24px 20px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .breakdown-row { font-size: 0.8rem; padding: 12px 14px; }
+    .guide-cta { flex-direction: column; }
+    .steps { display: none; }
+  }
+</style>
+<script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">EV<span>Clear</span></a>
+  <a href="/" class="nav-back">← Back to EVClear</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🔋 Free Tool</div>
+  <h1>How Much Will You <span>Actually Save</span> Going Electric?</h1>
+  <p>Enter your details below and we'll calculate your exact savings — fuel costs, government incentives, servicing, and your breakeven point.</p>
+</div>
+
+<div class="calc-wrapper">
+
+  <!-- STEPS -->
+  <div class="steps">
+    <div class="step active" id="step1"><span class="step-num">01</span>Your Car</div>
+    <div class="step" id="step2"><span class="step-num">02</span>EV Choice</div>
+    <div class="step" id="step3"><span class="step-num">03</span>Charging</div>
+    <div class="step" id="step4"><span class="step-num">04</span>Results</div>
+  </div>
+
+  <div class="calc-card">
+
+    <!-- SCREEN 1: Current car -->
+    <div class="screen active" id="screen-1">
+      <div class="section-title">Tell us about your current car</div>
+      <div class="section-sub">We'll use this to calculate what you're spending now.</div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Your state</label>
+          <select id="state">
+            <option value="">Select state...</option>
+            <option value="QLD">Queensland</option>
+            <option value="NSW">New South Wales</option>
+            <option value="VIC">Victoria</option>
+            <option value="SA">South Australia</option>
+            <option value="WA">Western Australia</option>
+            <option value="ACT">ACT</option>
+            <option value="NT">Northern Territory</option>
+            <option value="TAS">Tasmania</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Annual kilometres driven</label>
+          <select id="annual-km">
+            <option value="10000">10,000 km</option>
+            <option value="15000" selected>15,000 km (average)</option>
+            <option value="20000">20,000 km</option>
+            <option value="25000">25,000 km</option>
+            <option value="30000">30,000 km</option>
+            <option value="40000">40,000+ km</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Fuel consumption (L/100km)</label>
+          <select id="fuel-use">
+            <option value="7">7L — Small/efficient car</option>
+            <option value="9">9L — Average sedan/hatch</option>
+            <option value="11" selected>11L — Average SUV</option>
+            <option value="13">13L — Large SUV / ute</option>
+            <option value="15">15L — Heavy 4WD</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Petrol price (per litre)</label>
+          <select id="petrol-price">
+            <option value="1.80">$1.80</option>
+            <option value="1.90">$1.90</option>
+            <option value="2.00" selected>$2.00 (average)</option>
+            <option value="2.10">$2.10</option>
+            <option value="2.20">$2.20</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="field" style="margin-bottom:16px;">
+        <label>How are you buying?</label>
+        <div class="toggle-group" id="buy-method">
+          <button class="toggle-btn active" data-val="cash">Cash / Finance</button>
+          <button class="toggle-btn" data-val="novated">Novated Lease</button>
+        </div>
+      </div>
+
+      <div class="field hidden" id="income-field">
+        <label>Your annual income (for FBT savings estimate)</label>
+        <select id="income">
+          <option value="60000">Under $80k</option>
+          <option value="90000">$80k – $120k</option>
+          <option value="140000" selected>$120k – $180k</option>
+          <option value="200000">$180k+</option>
+        </select>
+      </div>
+
+      <div class="divider"></div>
+      <button class="btn-primary" onclick="goToScreen(2)">Next — Choose Your EV →</button>
+    </div>
+
+    <!-- SCREEN 2: EV choice -->
+    <div class="screen" id="screen-2">
+      <div class="section-title">Which EV are you considering?</div>
+      <div class="section-sub">We've pre-loaded real Australian specs and pricing.</div>
+
+      <div class="form-grid full">
+        <div class="field">
+          <label>Select an EV model</label>
+          <select id="ev-model">
+            <optgroup label="Under $30,000">
+              <option value="atto1_e" data-price="23990" data-kwh="33" data-range="220" data-dc="60">BYD Atto 1 Essential — $23,990</option>
+              <option value="atto1_p" data-price="27990" data-kwh="43" data-range="310" data-dc="60">BYD Atto 1 Premium — $27,990</option>
+            </optgroup>
+            <optgroup label="$30,000 – $40,000">
+              <option value="mg4_43" data-price="31990" data-kwh="43" data-range="316" data-dc="88">MG4 EV Urban 43kWh — $31,990</option>
+              <option value="mg4_54" data-price="34990" data-kwh="54" data-range="405" data-dc="150">MG4 EV Urban 54kWh — $34,990</option>
+              <option value="dolphin" data-price="33792" data-kwh="44" data-range="340" data-dc="60">BYD Dolphin Essential — $33,792</option>
+              <option value="atto2" data-price="31990" data-kwh="51" data-range="345" data-dc="87">BYD Atto 2 — $31,990</option>
+              <option value="atto3" data-price="39990" data-kwh="60" data-range="420" data-dc="88">BYD Atto 3 — $39,990</option>
+            </optgroup>
+            <optgroup label="$40,000 – $60,000">
+              <option value="ev3" data-price="46990" data-kwh="58" data-range="504" data-dc="135" selected>Kia EV3 Long Range — $46,990</option>
+              <option value="ev5" data-price="49990" data-kwh="84" data-range="500" data-dc="150">Kia EV5 — $49,990</option>
+              <option value="ex30" data-price="49990" data-kwh="51" data-range="450" data-dc="153">Volvo EX30 — $49,990</option>
+            </optgroup>
+            <optgroup label="$57,000+">
+              <option value="seal" data-price="57381" data-kwh="82" data-range="570" data-dc="150">BYD Seal — $57,381</option>
+              <option value="zeekr7x" data-price="57900" data-kwh="100" data-range="615" data-dc="360">Zeekr 7X — $57,900</option>
+              <option value="modely" data-price="58900" data-kwh="75" data-range="533" data-dc="250">Tesla Model Y — $58,900</option>
+              <option value="model3" data-price="60315" data-kwh="60" data-range="554" data-dc="170">Tesla Model 3 — $60,315</option>
+              <option value="polestar2" data-price="63900" data-kwh="78" data-range="620" data-dc="150">Polestar 2 — $63,900</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div id="ev-specs" style="background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-top:4px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
+        <div><div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">Battery</div><div id="spec-kwh" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--neon);">58 kWh</div></div>
+        <div><div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">WLTP Range</div><div id="spec-range" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--neon);">504 km</div></div>
+        <div><div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">DC Charging</div><div id="spec-dc" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--neon);">135 kW</div></div>
+      </div>
+
+      <div class="divider"></div>
+      <div style="display:flex;gap:12px;">
+        <button class="btn-secondary" onclick="goToScreen(1)">← Back</button>
+        <button class="btn-primary" onclick="goToScreen(3)">Next — Charging Setup →</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 3: Charging -->
+    <div class="screen" id="screen-3">
+      <div class="section-title">How will you charge?</div>
+      <div class="section-sub">This affects your running costs significantly.</div>
+
+      <div class="field" style="margin-bottom:16px;">
+        <label>Home charging setup</label>
+        <div class="toggle-group" id="charging-type">
+          <button class="toggle-btn active" data-val="wallbox">7kW Wallbox</button>
+          <button class="toggle-btn" data-val="powerpoint">Power Point</button>
+          <button class="toggle-btn" data-val="none">No Home Charging</button>
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:16px;">
+        <label>Do you have rooftop solar?</label>
+        <div class="toggle-group" id="solar">
+          <button class="toggle-btn active" data-val="no">No solar</button>
+          <button class="toggle-btn" data-val="yes">Yes, I have solar</button>
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:16px;">
+        <label>Electricity tariff</label>
+        <div class="toggle-group" id="tariff">
+          <button class="toggle-btn active" data-val="0.30">Standard (~$0.30/kWh)</button>
+          <button class="toggle-btn" data-val="0.22">Off-peak (~$0.22/kWh)</button>
+          <button class="toggle-btn" data-val="0.10">Solar (~$0.10/kWh)</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div style="display:flex;gap:12px;">
+        <button class="btn-secondary" onclick="goToScreen(2)">← Back</button>
+        <button class="btn-primary" onclick="calculateAndShow()">Calculate My Savings →</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 4: Results -->
+    <div class="screen" id="screen-4">
+      <div class="section-title">Your EV Savings Report</div>
+      <div class="section-sub" id="results-sub">Based on your inputs — here's what switching to an EV looks like for you.</div>
+
+      <!-- Top 3 stats (always visible) -->
+      <div class="results-grid" id="top-stats">
+        <div class="result-card">
+          <div class="result-label">Annual Fuel Saving</div>
+          <div class="result-value" id="r-annual">$0</div>
+          <div class="result-sub">per year</div>
+        </div>
+        <div class="result-card highlight">
+          <div class="result-label">5-Year Total Saving</div>
+          <div class="result-value" id="r-5year">$0</div>
+          <div class="result-sub">vs your current car</div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Weekly Saving</div>
+          <div class="result-value" id="r-weekly">$0</div>
+          <div class="result-sub">per week</div>
+        </div>
+      </div>
+
+      <!-- Blurred breakdown + gate -->
+      <div id="gate-section">
+        <div style="position:relative;overflow:hidden;border-radius:14px;margin-bottom:0;">
+          <div class="breakdown" style="filter:blur(4px);pointer-events:none;user-select:none;">
+            <div class="breakdown-row header">
+              <span>Cost Over 5 Years</span><span>Your EV</span><span>Current Car</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="label">Purchase price</span><span class="ev-val">$••,•••</span><span class="petrol-val">$••,•••</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="label">Fuel / electricity</span><span class="ev-val">$•,•••</span><span class="petrol-val">$••,•••</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="label">Servicing</span><span class="ev-val">$•,•••</span><span class="petrol-val">$•,•••</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="label">Govt incentives</span><span class="ev-val">−$•,•••</span><span class="petrol-val">$0</span>
+            </div>
+            <div class="breakdown-row total-row">
+              <span class="label">Total</span><span class="ev-val">$••,•••</span><span class="petrol-val">$••,•••</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gate-overlay">
+          <div class="gate-box">
+            <div class="gate-icon">🔓</div>
+            <div class="gate-title">Unlock Your Full Report</div>
+            <div class="gate-sub">Enter your email to see the complete 5-year breakdown, your breakeven month, state incentives, and novated lease savings — free.</div>
+            <div class="gate-form">
+              <input type="email" id="gate-email" placeholder="your@email.com" />
+              <button class="btn-primary" onclick="unlockResults()">Send Me My Full Report →</button>
+            </div>
+            <div class="gate-note">No spam. Unsubscribe anytime. We'll also send you our free EV buying tips.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full results (post email) -->
+      <div class="full-results" id="full-results">
+
+        <div class="breakdown">
+          <div class="breakdown-row header">
+            <span>Cost Over 5 Years</span><span>Your EV</span><span>Current Car</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Purchase price</span>
+            <span class="ev-val" id="f-ev-price">—</span>
+            <span class="petrol-val" id="f-petrol-price">Similar</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Fuel / electricity (5yr)</span>
+            <span class="ev-val" id="f-ev-fuel">—</span>
+            <span class="petrol-val" id="f-petrol-fuel">—</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Servicing (5yr)</span>
+            <span class="ev-val" id="f-ev-service">$3,200</span>
+            <span class="petrol-val" id="f-petrol-service">$5,500</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Govt incentives</span>
+            <span class="ev-val" id="f-incentives">—</span>
+            <span class="petrol-val">$0</span>
+          </div>
+          <div class="breakdown-row total-row">
+            <span class="label" style="font-weight:600;">5-Year Total</span>
+            <span class="ev-val" id="f-ev-total" style="font-size:1rem;font-weight:700;">—</span>
+            <span class="petrol-val" id="f-petrol-total" style="font-size:1rem;">—</span>
+          </div>
+        </div>
+
+        <!-- Breakeven bar -->
+        <div class="breakeven-bar">
+          <div class="breakeven-label">Breakeven Point</div>
+          <div class="bar-track"><div class="bar-fill" id="breakeven-bar"></div></div>
+          <div class="bar-labels">
+            <span>Now</span>
+            <span id="breakeven-label">Year 5</span>
+          </div>
+          <div style="margin-top:12px;font-size:0.9rem;color:var(--body);">You'll be ahead from <strong style="color:var(--neon)" id="breakeven-text">month X</strong> onwards.</div>
+        </div>
+
+        <!-- State incentives -->
+        <div class="incentives-box" id="incentives-box">
+          <div class="incentives-title">🏛️ Your State Incentives (<span id="state-label">QLD</span>)</div>
+          <div id="incentives-list"></div>
+        </div>
+
+        <!-- Novated lease (conditional) -->
+        <div class="incentives-box" id="novated-box" style="display:none;">
+          <div class="incentives-title">💼 Novated Lease Savings Estimate</div>
+          <div class="incentive-item"><span>FBT exemption saving (est.)</span><strong id="fbt-saving">—</strong></div>
+          <div class="incentive-item"><span>Pre-tax salary deduction benefit</span><strong id="pretax-saving">—</strong></div>
+          <div class="incentive-item" style="font-weight:600;"><span>Total novated lease advantage</span><strong id="novated-total">—</strong></div>
+        </div>
+
+        <!-- Guide CTA -->
+        <div class="guide-cta">
+          <div class="guide-cta-text">
+            <h4>Ready to buy? Get the full Australian EV Buyer's Guide</h4>
+            <p>10 chapters, every model reviewed, dealer questions, state incentives, checklist. $27 AUD.</p>
+          </div>
+          <a href="https://buy.stripe.com/3cIeVc7kM6TG5oagbLfjG00" class="btn-guide" target="_blank">Get the Guide — $27 →</a>
+        </div>
+
+      </div>
+
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="btn-secondary" onclick="goToScreen(1);resetCalc()">← Start Over</button>
+      </div>
+    </div>
+
+  </div><!-- end calc-card -->
+</div><!-- end calc-wrapper -->
+
+<footer>
+  <a href="/">EVClear.com.au</a> — Australia's EV Authority &nbsp;·&nbsp; Calculations are estimates only. Always verify with your dealer and financial adviser. &nbsp;·&nbsp; © 2026 EVClear
+</footer>
+
+<script>
+  // State incentives data
+  const STATE_INCENTIVES = {
+    QLD: [
+      { label: 'Stamp duty concession on eligible EVs', value: 'Available' },
+      { label: 'Registration concession', value: 'Available' },
+      { label: 'Direct cash rebate', value: 'Ended' },
+    ],
+    NSW: [
+      { label: 'Stamp duty exemption (EVs under $78k)', value: 'Available' },
+      { label: 'EV registration discount', value: 'Available' },
+    ],
+    VIC: [
+      { label: 'Zero emissions vehicle discount', value: 'Available' },
+      { label: 'Stamp duty reduction', value: 'Available' },
+    ],
+    SA: [
+      { label: 'Stamp duty exemption on new EVs', value: 'Available' },
+      { label: 'Registration fee reduction', value: 'Available' },
+    ],
+    WA: [
+      { label: 'Stamp duty exemption on EVs under $70k', value: 'Available' },
+      { label: 'Zero emission vehicle rebate', value: 'Check wa.gov.au' },
+    ],
+    ACT: [
+      { label: 'Stamp duty exemption', value: 'Available' },
+      { label: 'Interest-free loan up to $15,000', value: 'Available' },
+      { label: '2-year free registration', value: 'Available' },
+    ],
+    NT: [
+      { label: 'Home charger rebate (until June 2026)', value: 'Up to $1,500' },
+      { label: 'Stamp duty concession', value: 'Available' },
+    ],
+    TAS: [
+      { label: 'Stamp duty exemption', value: 'Available' },
+    ],
+  };
+
+  // Novated lease FBT savings estimate by income
+  const FBT_SAVINGS = {
+    60000:  { fbt: 5200,  pretax: 2800 },
+    90000:  { fbt: 7500,  pretax: 4200 },
+    140000: { fbt: 10500, pretax: 6000 },
+    200000: { fbt: 14000, pretax: 8000 },
+  };
+
+  let calcData = {};
+
+  // Toggle buttons
+  document.querySelectorAll('.toggle-group').forEach(group => {
+    group.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (group.id === 'buy-method') {
+          document.getElementById('income-field').classList.toggle('hidden', btn.dataset.val !== 'novated');
+        }
+      });
+    });
+  });
+
+  // EV model specs update
+  document.getElementById('ev-model').addEventListener('change', updateSpecs);
+  function updateSpecs() {
+    const opt = document.getElementById('ev-model').selectedOptions[0];
+    document.getElementById('spec-kwh').textContent = opt.dataset.kwh + ' kWh';
+    document.getElementById('spec-range').textContent = opt.dataset.range + ' km';
+    document.getElementById('spec-dc').textContent = opt.dataset.dc + ' kW';
+  }
+
+  // Screen navigation
+  function goToScreen(n) {
+    document.querySelectorAll('.screen').forEach((s,i) => {
+      s.classList.toggle('active', i === n-1);
+    });
+    for (let i = 1; i <= 4; i++) {
+      const el = document.getElementById('step' + i);
+      el.classList.remove('active','done');
+      if (i < n) el.classList.add('done');
+      if (i === n) el.classList.add('active');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function resetCalc() {
+    document.getElementById('full-results').style.display = 'none';
+    document.getElementById('gate-section').style.display = 'block';
+    document.getElementById('gate-email').value = '';
+  }
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-AU');
+  }
+
+  function calculateAndShow() {
+    const state = document.getElementById('state').value || 'QLD';
+    const annualKm = parseInt(document.getElementById('annual-km').value);
+    const fuelUse = parseFloat(document.getElementById('fuel-use').value);
+    const petrolPrice = parseFloat(document.getElementById('petrol-price').value);
+    const buyMethod = document.querySelector('#buy-method .toggle-btn.active').dataset.val;
+    const income = parseInt(document.getElementById('income').value);
+    const evOpt = document.getElementById('ev-model').selectedOptions[0];
+    const evPrice = parseInt(evOpt.dataset.price);
+    const evKwh = parseInt(evOpt.dataset.kwh);
+    const tariff = parseFloat(document.querySelector('#tariff .toggle-btn.active').dataset.val);
+
+    // Calculations
+    const petrolCostPerKm = (fuelUse / 100) * petrolPrice;
+    const annualPetrol = petrolCostPerKm * annualKm;
+
+    const kwh_per_km = 0.18;
+    const evCostPerKm = kwh_per_km * tariff;
+    const annualEV = evCostPerKm * annualKm;
+
+    const annualFuelSaving = annualPetrol - annualEV;
+    const weeklyFuelSaving = annualFuelSaving / 52;
+    const fiveYearFuelSaving = annualFuelSaving * 5;
+    const serviceSaving = (5500 - 3200);
+    const fiveYearTotal = fiveYearFuelSaving + serviceSaving;
+
+    // Breakeven (months)
+    const monthlySaving = annualFuelSaving / 12;
+    const breakevenMonths = Math.ceil(evPrice / (monthlySaving + serviceSaving/60));
+    const breakevenCapped = Math.min(breakevenMonths, 60);
+    const breakevenPct = Math.max(10, Math.min(90, (breakevenCapped / 60) * 100));
+
+    // Incentives
+    const incentiveVal = state === 'ACT' ? 15000 : state === 'NT' ? 1500 : 2000;
+
+    // Store
+    calcData = {
+      state, annualKm, annualPetrol, annualEV,
+      annualFuelSaving, weeklyFuelSaving, fiveYearTotal,
+      evPrice, serviceSaving, incentiveVal,
+      fiveYearFuelSaving, breakevenMonths: breakevenCapped,
+      breakevenPct, buyMethod, income,
+    };
+
+    // Fill top stats
+    document.getElementById('r-annual').textContent = fmt(annualFuelSaving);
+    document.getElementById('r-5year').textContent = fmt(fiveYearTotal);
+    document.getElementById('r-weekly').textContent = fmt(weeklyFuelSaving);
+    document.getElementById('results-sub').textContent =
+      `Driving ${annualKm.toLocaleString()} km/year in ${state} — switching to ${evOpt.text.split('—')[0].trim()}`;
+
+    goToScreen(4);
+  }
+
+  function unlockResults() {
+    const email = document.getElementById('gate-email').value.trim();
+    if (!email || !email.includes('@')) {
+      document.getElementById('gate-email').style.borderColor = 'red';
+      return;
+    }
+
+    // Hide gate, show full results
+    document.getElementById('gate-section').style.display = 'none';
+    document.getElementById('full-results').style.display = 'block';
+
+    const d = calcData;
+
+    // Fill breakdown
+    document.getElementById('f-ev-price').textContent = fmt(d.evPrice);
+    document.getElementById('f-ev-fuel').textContent = fmt(d.annualEV * 5);
+    document.getElementById('f-petrol-fuel').textContent = fmt(d.annualPetrol * 5);
+    document.getElementById('f-incentives').textContent = '−' + fmt(d.incentiveVal);
+    const evTotal = d.evPrice + (d.annualEV * 5) + 3200 - d.incentiveVal;
+    const petrolTotal = d.evPrice + (d.annualPetrol * 5) + 5500;
+    document.getElementById('f-ev-total').textContent = fmt(evTotal);
+    document.getElementById('f-petrol-total').textContent = fmt(petrolTotal);
+
+    // Breakeven bar
+    setTimeout(() => {
+      document.getElementById('breakeven-bar').style.width = d.breakevenPct + '%';
+    }, 300);
+
+    const bYears = Math.floor(d.breakevenMonths / 12);
+    const bMonths = d.breakevenMonths % 12;
+    const bText = bYears > 0
+      ? `${bYears} year${bYears>1?'s':''} ${bMonths > 0 ? bMonths + ' months' : ''}`
+      : `${d.breakevenMonths} months`;
+    document.getElementById('breakeven-text').textContent = bText;
+    document.getElementById('breakeven-label').textContent = `Month ${d.breakevenMonths}`;
+
+    // State incentives
+    document.getElementById('state-label').textContent = d.state;
+    const incentivesList = document.getElementById('incentives-list');
+    incentivesList.innerHTML = '';
+    (STATE_INCENTIVES[d.state] || STATE_INCENTIVES['QLD']).forEach(item => {
+      incentivesList.innerHTML += `<div class="incentive-item"><span>${item.label}</span><strong>${item.value}</strong></div>`;
+    });
+
+    // Novated lease
+    if (d.buyMethod === 'novated') {
+      document.getElementById('novated-box').style.display = 'block';
+      const savings = FBT_SAVINGS[d.income] || FBT_SAVINGS[140000];
+      document.getElementById('fbt-saving').textContent = fmt(savings.fbt);
+      document.getElementById('pretax-saving').textContent = fmt(savings.pretax);
+      document.getElementById('novated-total').textContent = fmt(savings.fbt + savings.pretax);
+    }
+
+    // Submit email to Beehiiv via hidden iframe form
+    const beehiivForm = document.createElement('form');
+    beehiivForm.action = 'https://subscribe-forms.beehiiv.com/d90058f1-6675-4db9-a705-5ce00c677d2e';
+    beehiivForm.method = 'POST';
+    beehiivForm.target = 'beehiiv-hidden';
+    beehiivForm.style.display = 'none';
+    const emailInput = document.createElement('input');
+    emailInput.name = 'email';
+    emailInput.value = email;
+    beehiivForm.appendChild(emailInput);
+    document.body.appendChild(beehiivForm);
+    const hiddenFrame = document.createElement('iframe');
+    hiddenFrame.name = 'beehiiv-hidden';
+    hiddenFrame.style.display = 'none';
+    document.body.appendChild(hiddenFrame);
+    beehiivForm.submit();
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
