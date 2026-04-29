@@ -8,8 +8,6 @@ excerpt: State rebates have changed a lot in the last two years. Here's exactly
   disappears.
 readtime: 5 min read
 ---
-**Body:**
-
 Let's be real — government incentives are confusing. Every state does something different, the rules keep changing, and half the information online is already out of date. So we've done the research for you.
 
 Here's exactly what's available right now in 2026, state by state. No fluff, no jargon — just the actual numbers and how to get them.
