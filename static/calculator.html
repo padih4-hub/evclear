@@ -1099,22 +1099,16 @@
       document.getElementById('novated-total').textContent = fmt(savings.fbt + savings.pretax);
     }
 
-    // Submit email to Beehiiv via hidden iframe form
-    const beehiivForm = document.createElement('form');
-    beehiivForm.action = 'https://subscribe-forms.beehiiv.com/d90058f1-6675-4db9-a705-5ce00c677d2e';
-    beehiivForm.method = 'POST';
-    beehiivForm.target = 'beehiiv-hidden';
-    beehiivForm.style.display = 'none';
-    const emailInput = document.createElement('input');
-    emailInput.name = 'email';
-    emailInput.value = email;
-    beehiivForm.appendChild(emailInput);
-    document.body.appendChild(beehiivForm);
-    const hiddenFrame = document.createElement('iframe');
-    hiddenFrame.name = 'beehiiv-hidden';
-    hiddenFrame.style.display = 'none';
-    document.body.appendChild(hiddenFrame);
-    beehiivForm.submit();
+    // Submit to Beehiiv via Netlify serverless function
+    fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email }),
+    }).then(r => r.json()).then(data => {
+      console.log('Subscription result:', data);
+    }).catch(err => {
+      console.error('Subscription error:', err);
+    });
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
