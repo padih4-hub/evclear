@@ -2,7 +2,7 @@
 title: Understanding EV Range in Australia — What the Numbers Actually Mean
 date: 2026-04-30T11:40:32.369Z
 category: Buying Guide
-image: /images/ev-charging.jpg
+image: /images/cemrecan-yurtman-phmopxtx1xg-unsplash.jpg
 excerpt: The range on the brochure and the range you actually get are two
   different numbers. Here's what Australian drivers need to know before buying.
 readtime: 5 min read
