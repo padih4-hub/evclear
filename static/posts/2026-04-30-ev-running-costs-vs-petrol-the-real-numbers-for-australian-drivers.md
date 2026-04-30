@@ -2,7 +2,7 @@
 title: EV Running Costs vs Petrol — The Real Numbers for Australian Drivers
 date: 2026-04-30T11:42:38.927Z
 category: Cost & Savings
-image: /images/ev-night-charging.jpg
+image: /images/jesse-donoghoe-eq0gng4wgze-unsplash.jpg
 excerpt: Everyone says EVs are cheaper to run. But what do the actual numbers
   look like for Australians? We break it down dollar by dollar.
 readtime: 6 min read
