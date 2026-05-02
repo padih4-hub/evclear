@@ -861,23 +861,27 @@
     const avgPetrolPrice = 35000;
     const evPremium = Math.max(0, evPrice - avgPetrolPrice);
     const monthlySavingTotal = annualFuelSaving / 12 + serviceSaving / 60;
-    let breakevenMonths, breakevenCapped, breakevenPct;
+    let breakevenMonths, breakevenCapped, breakevenPct, breakevenExceeds5yr;
     if (monthlySavingTotal <= 0) {
-      breakevenMonths = 999;
+      breakevenExceeds5yr = true;
+      breakevenMonths = 60;
       breakevenCapped = 60;
       breakevenPct = 95;
     } else if (evPremium <= 0) {
+      breakevenExceeds5yr = false;
       breakevenMonths = 1;
       breakevenCapped = 1;
       breakevenPct = 10;
     } else {
-      breakevenMonths = Math.ceil(evPremium / monthlySavingTotal);
-      breakevenCapped = Math.min(breakevenMonths, 60);
+      const rawMonths = Math.ceil(evPremium / monthlySavingTotal);
+      breakevenExceeds5yr = rawMonths > 60;
+      breakevenMonths = rawMonths;
+      breakevenCapped = Math.min(rawMonths, 60);
       breakevenPct = Math.max(10, Math.min(90, (breakevenCapped / 60) * 100));
     }
     const incentiveVal = state === 'ACT' ? 15000 : state === 'NT' ? 1500 : 2000;
 
-    calcData = { state, annualKm, annualPetrol, annualEV, annualFuelSaving, weeklyFuelSaving, fiveYearTotal, evPrice, serviceSaving, incentiveVal, fiveYearFuelSaving, breakevenMonths: breakevenCapped, breakevenPct, buyMethod, income };
+    calcData = { state, annualKm, annualPetrol, annualEV, annualFuelSaving, weeklyFuelSaving, fiveYearTotal, evPrice, serviceSaving, incentiveVal, fiveYearFuelSaving, breakevenMonths: breakevenCapped, breakevenPct, breakevenExceeds5yr, buyMethod, income };
 
     // Preview cards
     document.getElementById('preview-weekly').textContent = fmt(weeklyFuelSaving);
@@ -885,7 +889,7 @@
     const bYP = Math.floor(breakevenCapped / 12);
     const bMP = breakevenCapped % 12;
     let breakevenDisplay;
-    if (breakevenMonths === 999) {
+    if (breakevenExceeds5yr) {
       breakevenDisplay = '>5 yrs';
     } else if (bYP >= 1 && bMP === 0) {
       breakevenDisplay = `~${bYP} yr`;
@@ -924,7 +928,7 @@
     setTimeout(() => { document.getElementById('breakeven-bar').style.width = d.breakevenPct + '%'; }, 300);
     const bY = Math.floor(d.breakevenMonths / 12);
     const bM = d.breakevenMonths % 12;
-    if (d.breakevenMonths === 999) {
+    if (d.breakevenExceeds5yr) {
       document.getElementById('breakeven-text').textContent = 'beyond 5 years based on these inputs';
       document.getElementById('breakeven-label').textContent = '>5 yrs';
     } else if (bY > 0) {
