@@ -857,15 +857,21 @@
     const fiveYearFuelSaving = annualFuelSaving * 5;
     const serviceSaving = 5500 - 3200;
     const fiveYearTotal = fiveYearFuelSaving + serviceSaving;
-    const monthlySavingTotal = (annualFuelSaving + serviceSaving / 5) / 12;
+    // Breakeven: months until savings cover EV price premium vs avg petrol car ($35k)
+    const avgPetrolPrice = 35000;
+    const evPremium = Math.max(0, evPrice - avgPetrolPrice);
+    const monthlySavingTotal = annualFuelSaving / 12 + serviceSaving / 60;
     let breakevenMonths, breakevenCapped, breakevenPct;
     if (monthlySavingTotal <= 0) {
-      // EV costs more to run — no breakeven within 5 years
       breakevenMonths = 999;
       breakevenCapped = 60;
       breakevenPct = 95;
+    } else if (evPremium <= 0) {
+      breakevenMonths = 1;
+      breakevenCapped = 1;
+      breakevenPct = 10;
     } else {
-      breakevenMonths = Math.ceil(evPrice / monthlySavingTotal);
+      breakevenMonths = Math.ceil(evPremium / monthlySavingTotal);
       breakevenCapped = Math.min(breakevenMonths, 60);
       breakevenPct = Math.max(10, Math.min(90, (breakevenCapped / 60) * 100));
     }
