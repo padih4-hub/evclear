@@ -24,39 +24,25 @@ It applies to battery electric vehicles priced under $91,387 GST inclusive for t
 
 If you're an employee and haven't looked into novated leasing yet — do it before you buy anything. A 20 minute conversation with a novated lease provider could save you thousands.
 
-### State by State — What's Available Right Now
+## State by state incentives in 2026
 
-#### Queensland
+The direct cash rebate era has mostly passed. Here's exactly what's available right now in each state:
 
-No direct cash rebate currently. But Queensland offers reduced stamp duty on eligible EVs and registration concessions. Not as generous as it used to be but still worth factoring into your total cost.
+**Queensland** — The $6,000/$3,000 ZEV Rebate Scheme closed on 2 September 2024 with funding exhausted. No replacement scheme has been announced. A small reduced stamp duty rate of approximately 1% applies to EVs, and a minor registration discount remains. The federal FBT exemption via novated lease is the main saving available to Queensland buyers.
 
-#### ACT
+**New South Wales** — The $3,000 cash rebate and stamp duty exemption both closed on 1 January 2024. Businesses can still access the EV Fleet Incentive program (open until May 2026). Individual buyers have no active state cash incentives — the federal FBT exemption is your primary saving.
 
-The most generous state scheme in the country right now. The ACT offers up to **$15,000 in interest-free loans** for eligible EV buyers plus full stamp duty exemption. If you live in Canberra and you're buying an EV — this is a no-brainer. Check the ACT Government website for current eligibility requirements.
+**Victoria** — The $100 registration discount was scrapped from 1 January 2026. Victoria currently has no active EV purchase incentives. Importantly, Victoria still applies a road user charge of 2.8 cents per kilometre for BEV owners — approximately $378 per year based on average driving. The federal FBT exemption remains available.
 
-#### Northern Territory
+**South Australia** — The $3,000 rebate closed in January 2024. A permanent reduced stamp duty rate of $2 per $100 of vehicle value applies to EVs — a modest but ongoing saving. Federal FBT exemption applies.
 
-A **$1,500 home charger rebate** is available until June 30, 2026. If you're in the NT and planning to install a home wallbox — claim this before it closes.
+**Western Australia** — The $3,500 ZEV rebate closed in May 2025 after funding was exhausted. A reduced stamp duty rate of $2 per $100 of value still applies. Federal FBT exemption applies.
 
-#### New South Wales
+**ACT** — Still the most generous state for EV buyers. Full stamp duty exemption with no cap on vehicle value. Two years of free registration. Low-interest loans of up to $15,000 at 3% interest (note: the rate changed from 0% to 3% from July 2025). Federal FBT exemption also applies, making the ACT the best state to buy an EV in Australia right now.
 
-NSW has moved away from direct cash rebates and now focuses on stamp duty exemptions and reduced registration fees for eligible EVs. Check Service NSW for current thresholds as these update regularly.
+**Northern Territory** — Free registration for BEVs and PHEVs until 30 June 2027. Stamp duty concession of up to $1,500 for EVs valued under $50,000, also until June 2027. A $1,000 home charger grant is available until 30 June 2026 — worth grabbing quickly if you're in the NT. Federal FBT exemption applies.
 
-#### Victoria
-
-Similar to NSW — stamp duty concessions and registration discounts rather than direct cash. Victoria has been scaling back its direct incentives so always verify current offerings on the VicRoads website before buying.
-
-#### South Australia
-
-Stamp duty exemption on new EVs and plug-in hybrids. SA also offers some of the lowest EV registration fees in the country. Worth checking the RevenueSA website for the latest figures.
-
-#### Western Australia
-
-WA offers a stamp duty exemption on eligible EVs under a certain price threshold. Check the WA Department of Transport for current eligibility.
-
-#### Tasmania
-
-Registration and stamp duty concessions available. Smaller market but solid incentives relative to the state's size.
+**Tasmania** — All previous rebates and stamp duty exemptions have closed. No active state EV incentives currently available. Federal FBT exemption is your main saving.
 
 ### The Luxury Car Tax threshold
 
