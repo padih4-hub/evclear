@@ -273,6 +273,7 @@
             <option value="jeep">Jeep</option>
             <option value="kgm">KGM</option>
             <option value="kia">Kia</option>
+            <option value="ldv">LDV</option>
             <option value="leapmotor">Leapmotor</option>
             <option value="lexus">Lexus</option>
             <option value="lotus">Lotus</option>
@@ -280,13 +281,19 @@
             <option value="mercedes">Mercedes-Benz</option>
             <option value="mg">MG</option>
             <option value="mini">Mini</option>
+            <option value="nissan">Nissan</option>
             <option value="polestar">Polestar</option>
             <option value="porsche">Porsche</option>
+            <option value="renault">Renault</option>
             <option value="rolls">Rolls-Royce</option>
             <option value="skoda">Skoda</option>
+            <option value="smart">Smart</option>
+            <option value="subaru">Subaru</option>
             <option value="tesla">Tesla</option>
+            <option value="toyota">Toyota</option>
             <option value="vw">Volkswagen</option>
             <option value="volvo">Volvo</option>
+            <option value="xpeng">XPeng</option>
             <option value="zeekr">Zeekr</option>
           </select>
         </div>
@@ -471,24 +478,35 @@
 <script>
   // ── EV DATABASE ──────────────────────────────────────────────────────────
   const EV_DB = {
-    alfa: [{v:"alfa_junior",p:57900,kwh:54,range:407,dc:100,label:"Junior Elettrica — $57,900"}],
+    alfa: [
+      {v:"alfa_junior",p:57900,kwh:54,range:407,dc:100,label:"Junior Elettrica — $57,900"},
+    ],
     audi: [
       {v:"audi_q4_45",p:84900,kwh:82,range:524,dc:135,label:"Q4 45 e-tron — $84,900"},
       {v:"audi_q4_45sb",p:86500,kwh:82,range:540,dc:135,label:"Q4 45 e-tron Sportback — $86,500"},
       {v:"audi_q4_55",p:105900,kwh:82,range:488,dc:135,label:"Q4 55 e-tron quattro — $105,900"},
+      {v:"audi_q4_55sb",p:107500,kwh:82,range:503,dc:135,label:"Q4 55 e-tron quattro Sportback — $107,500"},
       {v:"audi_q6",p:115500,kwh:100,range:641,dc:260,label:"Q6 e-tron Performance — $115,500"},
       {v:"audi_q6_q",p:122500,kwh:100,range:625,dc:260,label:"Q6 e-tron quattro — $122,500"},
+      {v:"audi_sq6",p:151400,kwh:100,range:598,dc:260,label:"SQ6 e-tron — $151,400"},
       {v:"audi_q8_50",p:140600,kwh:95,range:411,dc:170,label:"Q8 50 e-tron — $140,600"},
       {v:"audi_q8_55sb",p:166600,kwh:114,range:600,dc:170,label:"Q8 Sportback 55 e-tron — $166,600"},
+      {v:"audi_sq8",p:173600,kwh:114,range:494,dc:170,label:"SQ8 e-tron — $173,600"},
+      {v:"audi_sq8sb",p:180600,kwh:114,range:513,dc:170,label:"SQ8 Sportback e-tron — $180,600"},
       {v:"audi_etron_s",p:209900,kwh:105,range:559,dc:320,label:"S e-tron GT — $209,900"},
       {v:"audi_etron_rs",p:264900,kwh:105,range:522,dc:320,label:"RS e-tron GT — $264,900"},
+      {v:"audi_etron_rs_perf",p:309900,kwh:105,range:528,dc:320,label:"RS e-tron GT Performance — $309,900"},
     ],
     bmw: [
       {v:"bmw_i4",p:88990,kwh:70,range:448,dc:205,label:"i4 eDrive35 — $88,990"},
       {v:"bmw_i5_40",p:155900,kwh:84,range:582,dc:205,label:"i5 eDrive40 — $155,900"},
+      {v:"bmw_i5_m60",p:215900,kwh:84,range:516,dc:205,label:"i5 M60 xDrive — $215,900"},
+      {v:"bmw_i5_m60t",p:219900,kwh:84,range:506,dc:205,label:"i5 M60 xDrive Touring — $219,900"},
       {v:"bmw_i7",p:306900,kwh:106,range:625,dc:195,label:"i7 xDrive60 — $306,900"},
+      {v:"bmw_i7_m70",p:344900,kwh:106,range:560,dc:195,label:"i7 M70 xDrive — $344,900"},
       {v:"bmw_ix_45",p:142900,kwh:95,range:522,dc:195,label:"iX xDrive45 M Sport — $142,900"},
       {v:"bmw_ix_50",p:180400,kwh:112,range:620,dc:195,label:"iX xDrive50 Sport — $180,400"},
+      {v:"bmw_ix_m60",p:228400,kwh:112,range:566,dc:195,label:"iX M60 xDrive — $228,400"},
       {v:"bmw_ix1",p:77900,kwh:67,range:514,dc:130,label:"iX1 xDrive30 — $77,900"},
       {v:"bmw_ix2",p:79900,kwh:67,range:512,dc:130,label:"iX2 xDrive30 — $79,900"},
       {v:"bmw_ix3",p:109900,kwh:108,range:805,dc:400,label:"iX3 50 xDrive — $109,900"},
@@ -552,9 +570,9 @@
       {v:"geely_ex5_i",p:44990,kwh:68,range:450,dc:120,label:"EX5 Inspire — $44,990"},
     ],
     genesis: [
-      {v:"genesis_gv60",p:88300,kwh:84,range:561,dc:233,label:"GV60 Advanced RWD — $88,300"},
+      {v:"genesis_gv60",p:87900,kwh:77,range:545,dc:233,label:"GV60 AWD — $87,900"},
       {v:"genesis_gv70",p:132800,kwh:84,range:462,dc:233,label:"GV70 — $132,800"},
-      {v:"genesis_g80",p:155000,kwh:95,range:570,dc:233,label:"G80 — $155,000"},
+      {v:"genesis_g80",p:155000,kwh:95,range:570,dc:233,label:"G80 Signature — $155,000"},
     ],
     gwm: [
       {v:"gwm_ora_lux",p:35990,kwh:58,range:400,dc:88,label:"Ora Lux — $35,990"},
@@ -567,16 +585,26 @@
       {v:"hyundai_inster_cross",p:45000,kwh:49,range:293,dc:85,label:"Inster Cross — $45,000"},
       {v:"hyundai_ioniq5",p:76200,kwh:84,range:570,dc:233,label:"Ioniq 5 — $76,200"},
       {v:"hyundai_ioniq5_elite",p:81200,kwh:84,range:530,dc:233,label:"Ioniq 5 Elite — $81,200"},
+      {v:"hyundai_ioniq5_nline",p:91700,kwh:84,range:495,dc:233,label:"Ioniq 5 N Line Premium — $91,700"},
+      {v:"hyundai_ioniq5_n",p:115000,kwh:84,range:448,dc:233,label:"Ioniq 5 N — $115,000"},
       {v:"hyundai_ioniq6_sr",p:65500,kwh:53,range:429,dc:233,label:"Ioniq 6 Standard Range — $65,500"},
       {v:"hyundai_ioniq6_er",p:71500,kwh:77,range:614,dc:233,label:"Ioniq 6 Extended Range — $71,500"},
+      {v:"hyundai_ioniq6_drwd",p:77500,kwh:77,range:545,dc:233,label:"Ioniq 6 Dynamiq RWD — $77,500"},
+      {v:"hyundai_ioniq6_dawd",p:82000,kwh:77,range:519,dc:233,label:"Ioniq 6 Dynamiq AWD — $82,000"},
+      {v:"hyundai_ioniq6_erwd",p:81000,kwh:77,range:545,dc:233,label:"Ioniq 6 Epiq RWD — $81,000"},
+      {v:"hyundai_ioniq6_eawd",p:85500,kwh:77,range:519,dc:233,label:"Ioniq 6 Epiq AWD — $85,500"},
       {v:"hyundai_ioniq9",p:119750,kwh:110,range:600,dc:350,label:"Ioniq 9 — $119,750"},
       {v:"hyundai_kona_sr",p:54000,kwh:49,range:370,dc:80,label:"Kona Electric Standard Range — $54,000"},
       {v:"hyundai_kona_er",p:58000,kwh:65,range:505,dc:102,label:"Kona Electric Extended Range — $58,000"},
+      {v:"hyundai_kona_per",p:68000,kwh:65,range:444,dc:102,label:"Kona Electric Premium Extended — $68,000"},
     ],
-    jaecoo: [{v:"jaecoo_j5",p:35990,kwh:61,range:402,dc:130,label:"J5 EV — $35,990"}],
+    jaecoo: [
+      {v:"jaecoo_j5",p:35990,kwh:61,range:402,dc:130,label:"J5 Track — $35,990"},
+    ],
     jeep: [
       {v:"jeep_avenger_lon",p:49990,kwh:54,range:396,dc:100,label:"Avenger Longitude — $49,990"},
       {v:"jeep_avenger_lim",p:54990,kwh:54,range:396,dc:100,label:"Avenger Limited — $54,990"},
+      {v:"jeep_avenger_sum",p:60990,kwh:54,range:390,dc:100,label:"Avenger Summit — $60,990"},
     ],
     kgm: [
       {v:"kgm_musso_2wd",p:60000,kwh:81,range:420,dc:80,label:"Musso EV 2WD — $60,000"},
@@ -594,14 +622,27 @@
       {v:"ev5_air_sr",p:56770,kwh:64,range:400,dc:150,label:"EV5 Air Standard Range — $56,770"},
       {v:"ev5_air_lr",p:61170,kwh:88,range:555,dc:150,label:"EV5 Air Long Range — $61,170"},
       {v:"ev5_earth",p:64770,kwh:88,range:500,dc:150,label:"EV5 Earth — $64,770"},
-      {v:"ev5_gtline",p:68770,kwh:88,range:500,dc:150,label:"EV5 GT-Line — $68,770"},
+      {v:"ev5_gtline",p:71770,kwh:88,range:470,dc:150,label:"EV5 GT-Line — $71,770"},
       {v:"kia_ev6_air",p:72660,kwh:77,range:528,dc:233,label:"EV6 Air — $72,660"},
       {v:"kia_ev6_gtline_rwd",p:79660,kwh:77,range:508,dc:233,label:"EV6 GT-Line RWD — $79,660"},
       {v:"kia_ev6_gtline_awd",p:87660,kwh:77,range:484,dc:233,label:"EV6 GT-Line AWD — $87,660"},
       {v:"kia_ev6_gt",p:99660,kwh:77,range:424,dc:233,label:"EV6 GT — $99,660"},
       {v:"kia_ev9_air",p:97000,kwh:76,range:443,dc:233,label:"EV9 Air — $97,000"},
       {v:"kia_ev9_earth",p:106500,kwh:100,range:512,dc:233,label:"EV9 Earth — $106,500"},
+      {v:"kia_ev9_gtline",p:121000,kwh:100,range:505,dc:233,label:"EV9 GT-Line — $121,000"},
       {v:"kia_ev9_gt",p:129250,kwh:100,range:510,dc:233,label:"EV9 GT — $129,250"},
+      {v:"kia_niro_s",p:66590,kwh:65,range:460,dc:80,label:"Niro EV S — $66,590"},
+      {v:"kia_niro_gtline",p:72360,kwh:65,range:460,dc:80,label:"Niro EV GT-Line — $72,360"},
+    ],
+    ldv: [
+      {v:"ldv_ed7_swb",p:59990,kwh:77,range:318,dc:80,label:"eDeliver 7 SWB Low Roof — $59,990"},
+      {v:"ldv_ed7_lwb",p:61990,kwh:77,range:310,dc:80,label:"eDeliver 7 LWB Low Roof — $61,990"},
+      {v:"ldv_ed7_lwb88",p:64990,kwh:88,range:362,dc:80,label:"eDeliver 7 LWB 88kWh — $64,990"},
+      {v:"ldv_ed7_hr",p:66990,kwh:88,range:328,dc:80,label:"eDeliver 7 LWB High Roof — $66,990"},
+      {v:"ldv_et60",p:92990,kwh:89,range:330,dc:80,label:"eT60 Ute — $92,990"},
+      {v:"ldv_mifa9_m",p:106000,kwh:90,range:440,dc:80,label:"Mifa 9 Mode — $106,000"},
+      {v:"ldv_mifa9_e",p:117000,kwh:90,range:435,dc:80,label:"Mifa 9 Executive — $117,000"},
+      {v:"ldv_mifa9_l",p:131000,kwh:90,range:430,dc:80,label:"Mifa 9 Luxe — $131,000"},
     ],
     leapmotor: [
       {v:"leapmotor_b10_s",p:38990,kwh:56,range:361,dc:80,label:"B10 Style — $38,990"},
@@ -613,12 +654,14 @@
     lexus: [
       {v:"lexus_rz_lux",p:84500,kwh:75,range:460,dc:150,label:"RZ 500e Luxury — $84,500"},
       {v:"lexus_rz_sl",p:91000,kwh:75,range:460,dc:150,label:"RZ 500e Sport Luxury — $91,000"},
+      {v:"lexus_rz_550",p:105000,kwh:77,range:437,dc:150,label:"RZ 550e F Sport — $105,000"},
     ],
     lotus: [
       {v:"lotus_eletre",p:189990,kwh:112,range:600,dc:350,label:"Eletre — $189,990"},
       {v:"lotus_eletre_s",p:229990,kwh:112,range:600,dc:350,label:"Eletre S — $229,990"},
       {v:"lotus_eletre_r",p:279990,kwh:112,range:490,dc:350,label:"Eletre R — $279,990"},
       {v:"lotus_emeya",p:189990,kwh:112,range:600,dc:350,label:"Emeya — $189,990"},
+      {v:"lotus_emeya_s",p:209990,kwh:112,range:600,dc:350,label:"Emeya S — $209,990"},
       {v:"lotus_emeya_r",p:259990,kwh:112,range:484,dc:350,label:"Emeya R — $259,990"},
     ],
     mazda: [
@@ -629,9 +672,15 @@
     ],
     mercedes: [
       {v:"mercedes_eqa_250",p:84900,kwh:71,range:496,dc:100,label:"EQA 250+ — $84,900"},
+      {v:"mercedes_eqa_350",p:102900,kwh:67,range:411,dc:100,label:"EQA 350 AWD — $102,900"},
       {v:"mercedes_eqb_250",p:89100,kwh:71,range:463,dc:100,label:"EQB 250+ — $89,100"},
       {v:"mercedes_eqe_300",p:134900,kwh:89,range:508,dc:170,label:"EQE 300 — $134,900"},
+      {v:"mercedes_eqe_350",p:154900,kwh:91,range:462,dc:170,label:"EQE 350 4MATIC — $154,900"},
+      {v:"mercedes_eqe_suv_300",p:134900,kwh:89,range:446,dc:170,label:"EQE SUV 300 — $134,900"},
+      {v:"mercedes_eqe_suv_350",p:144900,kwh:89,range:436,dc:170,label:"EQE SUV 350 4MATIC — $144,900"},
+      {v:"mercedes_eqe_suv_500",p:164900,kwh:91,range:440,dc:170,label:"EQE SUV 500 4MATIC — $164,900"},
       {v:"mercedes_eqs_450",p:219900,kwh:108,range:631,dc:200,label:"EQS 450 4MATIC — $219,900"},
+      {v:"mercedes_eqs_suv",p:194900,kwh:108,range:613,dc:200,label:"EQS SUV 450 4MATIC — $194,900"},
       {v:"mercedes_g580",p:249900,kwh:116,range:473,dc:200,label:"G580 EQ — $249,900"},
     ],
     mg: [
@@ -644,48 +693,122 @@
       {v:"mg_cyberster_rwd",p:99900,kwh:77,range:509,dc:135,label:"MG Cyberster RWD — $99,900"},
       {v:"mg_cyberster_awd",p:115000,kwh:77,range:443,dc:135,label:"MG Cyberster AWD — $115,000"},
     ],
-    mini: [{v:"mini_cooper_se",p:54990,kwh:54,range:402,dc:95,label:"Cooper SE — $54,990"}],
+    mini: [
+      {v:"mini_cooper_se",p:54990,kwh:54,range:402,dc:95,label:"Cooper SE — $54,990"},
+    ],
+    nissan: [
+      {v:"nissan_leaf",p:34990,kwh:40,range:270,dc:50,label:"Leaf — $34,990"},
+      {v:"nissan_leaf_plus",p:44990,kwh:62,range:385,dc:50,label:"Leaf e+ — $44,990"},
+    ],
     polestar: [
-      {v:"polestar2",p:63900,kwh:78,range:620,dc:150,label:"Polestar 2 — $63,900"},
-      {v:"polestar3",p:115000,kwh:111,range:560,dc:250,label:"Polestar 3 — $115,000"},
-      {v:"polestar4",p:89900,kwh:100,range:620,dc:200,label:"Polestar 4 — $89,900"},
+      {v:"polestar2_sr",p:62400,kwh:70,range:546,dc:150,label:"Polestar 2 Standard Range — $62,400"},
+      {v:"polestar2_lr",p:66400,kwh:82,range:659,dc:150,label:"Polestar 2 Long Range Single Motor — $66,400"},
+      {v:"polestar2_lrd",p:71400,kwh:82,range:596,dc:150,label:"Polestar 2 Long Range Dual Motor — $71,400"},
+      {v:"polestar2_pp",p:80380,kwh:82,range:568,dc:150,label:"Polestar 2 Long Range Performance Pack — $80,380"},
+      {v:"polestar3_rwd",p:116700,kwh:92,range:604,dc:250,label:"Polestar 3 Rear Motor — $116,700"},
+      {v:"polestar3_awd",p:131100,kwh:106,range:635,dc:250,label:"Polestar 3 Dual Motor — $131,100"},
+      {v:"polestar3_perf",p:146700,kwh:106,range:593,dc:250,label:"Polestar 3 Performance — $146,700"},
+      {v:"polestar4_rwd",p:78500,kwh:100,range:620,dc:200,label:"Polestar 4 Long Range Single Motor — $78,500"},
+      {v:"polestar4_awd",p:88350,kwh:100,range:590,dc:200,label:"Polestar 4 Long Range Dual Motor — $88,350"},
+      {v:"polestar5_dm",p:171100,kwh:112,range:670,dc:300,label:"Polestar 5 Dual Motor — $171,100"},
+      {v:"polestar5_perf",p:193100,kwh:112,range:565,dc:300,label:"Polestar 5 Performance — $193,100"},
     ],
     porsche: [
-      {v:"porsche_macan",p:89900,kwh:100,range:516,dc:270,label:"Macan Electric — $89,900"},
-      {v:"porsche_taycan",p:159900,kwh:105,range:630,dc:320,label:"Taycan — $159,900"},
-      {v:"porsche_taycan_cross",p:189900,kwh:105,range:590,dc:320,label:"Taycan Cross Turismo — $189,900"},
+      {v:"porsche_macan_base",p:129800,kwh:100,range:641,dc:270,label:"Macan Electric — $129,800"},
+      {v:"porsche_macan4",p:137600,kwh:100,range:612,dc:270,label:"Macan 4 — $137,600"},
+      {v:"porsche_macan4s",p:149300,kwh:100,range:606,dc:270,label:"Macan 4S — $149,300"},
+      {v:"porsche_macan_gts",p:171100,kwh:100,range:584,dc:270,label:"Macan GTS — $171,100"},
+      {v:"porsche_macan_turbo",p:187600,kwh:100,range:590,dc:270,label:"Macan Turbo — $187,600"},
+      {v:"porsche_taycan",p:175100,kwh:89,range:590,dc:320,label:"Taycan — $175,100"},
+      {v:"porsche_taycan4",p:184500,kwh:89,range:590,dc:320,label:"Taycan 4 — $184,500"},
+      {v:"porsche_taycan4s",p:216300,kwh:105,range:642,dc:320,label:"Taycan 4S — $216,300"},
+      {v:"porsche_taycan_gts",p:260300,kwh:105,range:642,dc:320,label:"Taycan GTS — $260,300"},
+      {v:"porsche_taycan_turbo",p:307500,kwh:105,range:630,dc:320,label:"Taycan Turbo — $307,500"},
+      {v:"porsche_taycan_ct4",p:198000,kwh:105,range:613,dc:320,label:"Taycan Cross Turismo 4 — $198,000"},
+      {v:"porsche_taycan_ct4s",p:224000,kwh:105,range:610,dc:320,label:"Taycan Cross Turismo 4S — $224,000"},
     ],
-    rolls: [{v:"rolls_spectre",p:780000,kwh:102,range:520,dc:195,label:"Spectre — $780,000"}],
+    renault: [
+      {v:"renault_megane",p:54990,kwh:60,range:454,dc:130,label:"Megane E-Tech — $54,990"},
+      {v:"renault_scenic_t",p:55990,kwh:60,range:430,dc:130,label:"Scenic E-Tech techno — $55,990"},
+      {v:"renault_scenic_lr",p:59990,kwh:87,range:625,dc:130,label:"Scenic E-Tech Long Range — $59,990"},
+      {v:"renault_scenic_alpine",p:65990,kwh:87,range:625,dc:130,label:"Scenic E-Tech esprit Alpine — $65,990"},
+    ],
+    rolls: [
+      {v:"rolls_spectre",p:770000,kwh:102,range:530,dc:195,label:"Spectre — $770,000"},
+    ],
     skoda: [
-      {v:"skoda_enyaq",p:55990,kwh:77,range:510,dc:135,label:"Enyaq — $55,990"},
-      {v:"skoda_enyaq_rs",p:69990,kwh:82,range:490,dc:135,label:"Enyaq RS — $69,990"},
+      {v:"skoda_elroq_60",p:49990,kwh:63,range:395,dc:135,label:"Elroq Select 60 — $49,990"},
+      {v:"skoda_elroq_85",p:59990,kwh:82,range:529,dc:135,label:"Elroq Select 85 — $59,990"},
+      {v:"skoda_elroq_130",p:69990,kwh:82,range:529,dc:135,label:"Elroq 130 Years Edition — $69,990"},
+      {v:"skoda_enyaq_60",p:54990,kwh:63,range:410,dc:135,label:"Enyaq SUV 60 — $54,990"},
+      {v:"skoda_enyaq_85",p:63990,kwh:82,range:547,dc:135,label:"Enyaq SUV 85 Sportline — $63,990"},
+      {v:"skoda_enyaq_coupe",p:68990,kwh:82,range:561,dc:135,label:"Enyaq Coupé 85 Sportline — $68,990"},
+    ],
+    smart: [
+      {v:"smart1_pro",p:54900,kwh:66,range:420,dc:150,label:"#1 Pro+ — $54,900"},
+      {v:"smart1_prem",p:58900,kwh:66,range:440,dc:150,label:"#1 Premium — $58,900"},
+      {v:"smart1_brabus",p:67900,kwh:66,range:400,dc:150,label:"#1 Brabus — $67,900"},
+      {v:"smart3_pro",p:57900,kwh:66,range:435,dc:150,label:"#3 Pro+ — $57,900"},
+      {v:"smart3_prem",p:61900,kwh:66,range:455,dc:150,label:"#3 Premium — $61,900"},
+      {v:"smart3_brabus",p:70900,kwh:66,range:415,dc:150,label:"#3 Brabus — $70,900"},
+    ],
+    subaru: [
+      {v:"subaru_solterra",p:63990,kwh:75,range:566,dc:100,label:"Solterra AWD — $63,990"},
+      {v:"subaru_solterra_t",p:69990,kwh:75,range:517,dc:100,label:"Solterra AWD Touring — $69,990"},
+      {v:"subaru_trailseeker",p:67990,kwh:75,range:533,dc:100,label:"Trailseeker AWD — $67,990"},
+      {v:"subaru_trailseeker_t",p:73990,kwh:75,range:488,dc:100,label:"Trailseeker AWD Touring — $73,990"},
     ],
     tesla: [
-      {v:"model3",p:59920,kwh:60,range:520,dc:170,label:"Model 3 — $59,920"},
-      {v:"model3_lr",p:74920,kwh:82,range:678,dc:250,label:"Model 3 Long Range AWD — $74,920"},
-      {v:"model3_perf",p:84920,kwh:82,range:598,dc:250,label:"Model 3 Performance — $84,920"},
-      {v:"modely",p:58900,kwh:75,range:466,dc:250,label:"Model Y RWD — $58,900"},
-      {v:"modely_lr",p:71900,kwh:82,range:600,dc:250,label:"Model Y Long Range AWD — $71,900"},
-      {v:"modely_perf",p:81900,kwh:82,range:560,dc:250,label:"Model Y Performance — $81,900"},
-      {v:"modely_l",p:74900,kwh:90,range:681,dc:250,label:"Model Y L (6-seat) — $74,900"},
+      {v:"model3",p:54900,kwh:60,range:520,dc:170,label:"Model 3 — $54,900"},
+      {v:"model3_lr",p:61900,kwh:80,range:750,dc:250,label:"Model 3 Long Range RWD — $61,900"},
+      {v:"model3_perf",p:80900,kwh:80,range:571,dc:250,label:"Model 3 Performance — $80,900"},
+      {v:"modely",p:58900,kwh:60,range:466,dc:250,label:"Model Y RWD — $58,900"},
+      {v:"modely_lr",p:68900,kwh:80,range:600,dc:250,label:"Model Y Long Range AWD — $68,900"},
+      {v:"modely_perf",p:89400,kwh:80,range:580,dc:250,label:"Model Y Performance — $89,400"},
+      {v:"modely_l",p:74900,kwh:88,range:681,dc:250,label:"Model Y L (6-seat) — $74,900"},
+    ],
+    toyota: [
+      {v:"toyota_bz4x_fwd",p:55990,kwh:75,range:591,dc:100,label:"bZ4X FWD — $55,990"},
+      {v:"toyota_bz4x_awd",p:67900,kwh:75,range:517,dc:100,label:"bZ4X AWD — $67,900"},
+      {v:"toyota_bz4x_touring",p:69900,kwh:75,range:488,dc:100,label:"bZ4X AWD Touring — $69,900"},
     ],
     vw: [
-      {v:"vw_id4",p:59990,kwh:77,range:530,dc:135,label:"ID.4 — $59,990"},
-      {v:"vw_id5",p:69990,kwh:77,range:520,dc:135,label:"ID.5 — $69,990"},
+      {v:"vw_id4_pro",p:59990,kwh:82,range:544,dc:135,label:"ID.4 Pro — $59,990"},
+      {v:"vw_id4_gtx",p:69990,kwh:82,range:511,dc:135,label:"ID.4 GTX — $69,990"},
+      {v:"vw_id5_pro",p:62990,kwh:82,range:543,dc:135,label:"ID.5 Pro — $62,990"},
+      {v:"vw_id5_gtx",p:72990,kwh:82,range:522,dc:135,label:"ID.5 GTX — $72,990"},
+      {v:"vw_idbuzz_swb",p:75990,kwh:84,range:432,dc:135,label:"ID.Buzz Pro SWB — $75,990"},
+      {v:"vw_idbuzz_lwb",p:80990,kwh:91,range:487,dc:135,label:"ID.Buzz Pro LWB — $80,990"},
+      {v:"vw_idbuzz_gtx",p:104990,kwh:91,range:453,dc:135,label:"ID.Buzz GTX LWB — $104,990"},
     ],
     volvo: [
-      {v:"volvo_ex30",p:49990,kwh:51,range:450,dc:153,label:"EX30 — $49,990"},
-      {v:"volvo_ex40",p:73990,kwh:69,range:490,dc:150,label:"EX40 — $73,990"},
-      {v:"volvo_ex90",p:149990,kwh:111,range:590,dc:250,label:"EX90 — $149,990"},
+      {v:"volvo_ex30_plus",p:49990,kwh:69,range:480,dc:153,label:"EX30 Single Motor Extended Plus — $49,990"},
+      {v:"volvo_ex30_ultra",p:54990,kwh:69,range:480,dc:153,label:"EX30 Single Motor Extended Ultra — $54,990"},
+      {v:"volvo_ex30_cross",p:62990,kwh:69,range:427,dc:153,label:"EX30 Cross Country — $62,990"},
+      {v:"volvo_ex40_rwd",p:69990,kwh:82,range:520,dc:150,label:"EX40 Single Motor Extended Range — $69,990"},
+      {v:"volvo_ex40_awd",p:74990,kwh:82,range:500,dc:150,label:"EX40 Twin Motor AWD — $74,990"},
+      {v:"volvo_es90_plus",p:88880,kwh:92,range:554,dc:250,label:"ES90 Plus Single Motor — $88,880"},
+      {v:"volvo_es90_ultra",p:107990,kwh:92,range:554,dc:250,label:"ES90 Ultra Single Motor — $107,990"},
+      {v:"volvo_ex90_plus",p:124990,kwh:111,range:570,dc:250,label:"EX90 Plus Twin Motor — $124,990"},
+      {v:"volvo_ex90_ultra",p:134990,kwh:111,range:570,dc:250,label:"EX90 Ultra Twin Motor Performance — $134,990"},
+    ],
+    xpeng: [
+      {v:"xpeng_g6_sr",p:54800,kwh:66,range:435,dc:215,label:"G6 Standard Range — $54,800"},
+      {v:"xpeng_g6_lr",p:59800,kwh:88,range:570,dc:215,label:"G6 Long Range — $59,800"},
     ],
     zeekr: [
-      {v:"zeekr7x",p:57900,kwh:100,range:615,dc:360,label:"7X RWD — $57,900"},
-      {v:"zeekr_7x_lr",p:67900,kwh:100,range:615,dc:360,label:"7X Long Range AWD — $67,900"},
-      {v:"zeekr_7x_perf",p:74900,kwh:100,range:580,dc:360,label:"7X Performance AWD — $74,900"},
+      {v:"zeekr_x_rwd",p:48900,kwh:61,range:405,dc:150,label:"X RWD — $48,900"},
+      {v:"zeekr_x_awd",p:57900,kwh:66,range:415,dc:150,label:"X AWD — $57,900"},
+      {v:"zeekr7x",p:57900,kwh:75,range:480,dc:360,label:"7X RWD — $57,900"},
+      {v:"zeekr_7x_lr",p:63900,kwh:100,range:615,dc:360,label:"7X Long Range RWD — $63,900"},
+      {v:"zeekr_7x_perf",p:72900,kwh:100,range:543,dc:360,label:"7X Performance AWD — $72,900"},
+      {v:"zeekr_009_fwd",p:115900,kwh:116,range:604,dc:200,label:"009 FWD — $115,900"},
+      {v:"zeekr_009_7s",p:135900,kwh:116,range:582,dc:200,label:"009 7-seat — $135,900"},
+      {v:"zeekr_009_6s",p:139900,kwh:116,range:582,dc:200,label:"009 6-seat — $139,900"},
     ],
   };
 
-  function filterModels(brand) {
+    function filterModels(brand) {
     const modelField = document.getElementById('model-field');
     const modelSelect = document.getElementById('ev-model');
     const specsDiv = document.getElementById('ev-specs');
