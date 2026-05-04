@@ -1,6 +1,5 @@
 ---
-title: "Novated Lease EV Australia 2026: How It Works, What You Save, and What
-  to Watch Out For"
+title: "Novated Lease EV Australia 2026: The Complete Guide"
 date: 2026-05-04T20:18:55.069Z
 category: Buying Guide
 image: /images/chatgpt-image-may-5-2026-06_30_30-am.png
