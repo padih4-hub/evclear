@@ -1021,11 +1021,11 @@
     } else if (breakevenMonths === 0) {
       breakevenDisplay = 'Day 1';
     } else if (bYP >= 1 && bMP === 0) {
-      breakevenDisplay = `~${bYP} yr`;
+      breakevenDisplay = `${bYP} yr`;
     } else if (bYP >= 1 && bMP > 0) {
-      breakevenDisplay = `~${bYP}yr ${bMP}mo`;
+      breakevenDisplay = `${bYP}yr ${bMP}mo`;
     } else {
-      breakevenDisplay = `~${breakevenCapped} mo`;
+      breakevenDisplay = `${breakevenCapped} mo`;
     }
     document.getElementById('preview-breakeven').textContent = breakevenDisplay;
 
@@ -1061,7 +1061,7 @@
       document.getElementById('breakeven-text').textContent = 'beyond 5 years based on these inputs';
       document.getElementById('breakeven-label').textContent = '>5 yrs';
     } else if (bY > 0) {
-      document.getElementById('breakeven-text').textContent = `${bY} year${bY>1?'s':''} ${bM > 0 ? bM + ' months' : ''}`;
+      document.getElementById('breakeven-text').textContent = `${bY} year${bY>1?'s':''} ${bM > 0 ? 'and ' + bM + ' months' : ''}`.trim();
       document.getElementById('breakeven-label').textContent = `Month ${d.breakevenMonths}`;
     } else {
       document.getElementById('breakeven-text').textContent = `${d.breakevenMonths} months`;
