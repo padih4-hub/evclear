@@ -58,6 +58,8 @@ At $119,750 it sits above the EV9 Air but below the EV9 Earth. For families who 
 
 **Best for:** Large families who want maximum range and premium interior quality. **Watch out for:** Higher entry price than the EV9. Only one grade currently available in Australia.
 
+![](/images/hyundai-uk-ioniq-9-0725-06.jpeg)
+
 - - -
 
 #### 3. Volvo EX90 — Best Premium 7-Seat EV
@@ -71,6 +73,8 @@ The interior is beautifully simple. Scandinavian design, premium materials, and 
 The 111kWh battery and up to 570km WLTP range means genuine all-day capability without range anxiety.
 
 **Best for:** Families who want safety, premium quality, and a European badge. **Watch out for:** Third row is tight for adults. Price puts it above the EV9 and Ioniq 9.
+
+![](/images/333448_1_5.jpg)
 
 - - -
 
@@ -86,6 +90,8 @@ At $80,990 for the Pro LWB, it's better value than many people expect.
 
 **Best for:** Families who do school runs, sports transport, and road trips where cabin space matters more than ground clearance. **Watch out for:** No all-wheel drive on the Pro grades. The retro styling isn't for everyone.
 
+![](/images/db2022au00712_web_1600.jpg)
+
 - - -
 
 #### 5. LDV Mifa 9 — Best Value 7-Seat People Mover
@@ -97,6 +103,8 @@ The Mifa 9 is one of Australia's first fully electric premium people movers and 
 Real-world range of around 380km is adequate for most family use. It's aimed at families who want the practicality of a people mover without the noise and fuel costs of a diesel.
 
 **Best for:** Families who want pure space and practicality at a relatively accessible price. **Watch out for:** Less refined driving experience than the EV9 or Ioniq 9. Brand recognition is lower.
+
+![](/images/ldv-mifa9.webp)
 
 - - -
 
@@ -110,6 +118,8 @@ Ultra-fast 800V charging means 18 minutes from 10-80% at a compatible charger. T
 
 **Best for:** Families of 2-4 who want the best all-round 5-seat EV in Australia. **Watch out for:** If you need 7 seats, look elsewhere.
 
+![](/images/hyundai-motor-group-g0dbvbxos_s-unsplash.jpg)
+
 - - -
 
 #### 7. Kia EV5 — Best Mid-Size Family EV Under $75k
@@ -119,6 +129,8 @@ Ultra-fast 800V charging means 18 minutes from 10-80% at a compatible charger. T
 The EV5 fills the gap between affordable hatchbacks and expensive large SUVs. At $56,770 for the Air Standard Range, it's genuinely affordable family transport with proper space, modern technology, and Kia's excellent build quality.
 
 **Best for:** Budget-conscious families wanting a mid-size EV SUV. **Watch out for:** Not as spacious as the EV9. AWD only available on higher grades.
+
+![](/images/2024_kia_ev5_earth_exclusive_awd_-thailand-_front_view.png)
 
 - - -
 
