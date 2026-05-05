@@ -4,22 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You — EVClear</title>
-<meta http-equiv="refresh" content="3;url=/EVClear-EV-Incentives-Cheat-Sheet-2026.pdf">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   body { background: #080808; color: #ffffff; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 24px; }
   h1 { font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 16px; }
   h1 span { color: #a8ff78; }
-  p { color: #aaaaaa; margin-bottom: 24px; }
+  p { color: #aaaaaa; margin-bottom: 24px; line-height: 1.7; }
   a { color: #a8ff78; }
+  .btn { display: inline-block; background: #a8ff78; color: #000; padding: 14px 32px; border-radius: 8px; font-family: 'Syne', sans-serif; font-weight: 700; text-decoration: none; margin-top: 8px; }
 </style>
 </head>
 <body>
   <div>
-    <h1>Your cheat sheet is <span>downloading now</span></h1>
-    <p>If it doesn't start automatically, <a href="/EVClear-EV-Incentives-Cheat-Sheet-2026.pdf">click here to download it</a>.</p>
-    <p style="font-size:0.85rem;">Redirecting you back to <a href="/">EVClear</a> in a moment...</p>
+    <h1>You're all set! Your cheat sheet is <span>downloading now</span></h1>
+    <p>Every government EV incentive in Australia — state by state, verified May 2026.</p>
+    <p>If it didn't start automatically, click below.</p>
+    <a href="/EVClear-EV-Incentives-Cheat-Sheet-2026.pdf" class="btn" download>Download Cheat Sheet →</a>
+    <p style="margin-top:32px;font-size:0.85rem;">Want to see your exact EV savings? <a href="/calculator">Try the free calculator →</a></p>
   </div>
+  <script>
+    // Auto trigger download
+    window.onload = function() {
+      setTimeout(function() {
+        window.location.href = '/EVClear-EV-Incentives-Cheat-Sheet-2026.pdf';
+      }, 1500);
+    }
+  </script>
 </body>
 </html>
