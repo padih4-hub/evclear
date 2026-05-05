@@ -44,6 +44,8 @@ The Air grade at $97,000 is the one to buy for most families. The Earth at $106,
 
 **Best for:** Families who genuinely need 7 seats and do regular road trips. **Watch out for:** Price. At $97,000+ it's not cheap, though the running costs help close the gap over time.
 
+![](/images/23796_2026_ev9.jpg)
+
 - - -
 
 #### 2. Hyundai Ioniq 9 — Best Premium Family SUV
