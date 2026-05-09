@@ -20,7 +20,7 @@ This guide explains exactly how a novated lease EV works, how much you'd save in
 
 - - -
 
-### What Is a Novated Lease EV?
+**What Is a Novated Lease EV?**
 
 A novated lease is a three-way arrangement between you, your employer, and a finance company.
 
@@ -38,7 +38,7 @@ With an EV novated lease you get three things working in your favour at once:
 
 - - -
 
-### How Much Can You Actually Save?
+**How Much Can You Actually Save?**
 
 Let's use a real example rather than vague ranges.
 
@@ -56,7 +56,7 @@ Your actual number depends on your income bracket, vehicle price, and lease stru
 
 - - -
 
-### Who Can Use a Novated Lease?
+**Who Can Use a Novated Lease?**
 
 Two things need to be true:
 
@@ -68,17 +68,17 @@ If you tick both boxes, the process is fairly straightforward. You pick a car, g
 
 - - -
 
-### Which EVs Qualify for the FBT Exemption?
+**Which EVs Qualify for the FBT Exemption?**
 
 Not every EV qualifies. Here are the rules that actually matter:
 
-**Must be a full Battery Electric Vehicle.** PHEVs lost the exemption from 1 April 2025 for any new lease. If you have an existing PHEV lease from before that date you're fine, but no new PHEV arrangements get the exemption.
+Must be a full Battery Electric Vehicle. PHEVs lost the exemption from 1 April 2025 for any new lease. If you have an existing PHEV lease from before that date you're fine, but no new PHEV arrangements get the exemption.
 
-**Must be under $91,387 at first retail sale.** This is the Luxury Car Tax threshold for fuel-efficient vehicles in 2025-26 and 2026-27. If LCT was ever payable on the car, it's permanently ineligible — even if the price later drops below the threshold.
+Must be under $91,387 at first retail sale. This is the Luxury Car Tax threshold for fuel-efficient vehicles in 2025-26 and 2026-27. If LCT was ever payable on the car, it's permanently ineligible — even if the price later drops below the threshold.
 
-**The accessories trap.** This one catches people out. If you're buying a car close to $91,387 and you add extras before delivery — tinted windows, upgraded wheels, floor mats — those accessories count toward the LCT value. You could push yourself over the threshold and lose the exemption permanently. Always check the total on-road price including all pre-delivery additions.
+The accessories trap. This one catches people out. If you're buying a car close to $91,387 and you add extras before delivery — tinted windows, upgraded wheels, floor mats — those accessories count toward the LCT value. You could push yourself over the threshold and lose the exemption permanently. Always check the total on-road price including all pre-delivery additions.
 
-**Popular EVs that qualify:**
+Popular EVs that qualify:
 
 * BYD Dolphin, Atto 1, Atto 2, Atto 3, Seal, Sealion 7
 * Tesla Model 3, Model Y RWD and Long Range
@@ -89,7 +89,7 @@ Not every EV qualifies. Here are the rules that actually matter:
 * Volvo EX30, EX40
 * Zeekr 7X RWD and Long Range
 
-**EVs that don't qualify (over the threshold):**
+EVs that don't qualify (over the threshold):
 
 * Tesla Model S, Model X
 * BMW iX M60, i7
@@ -100,7 +100,7 @@ Not every EV qualifies. Here are the rules that actually matter:
 
 - - -
 
-### What Running Costs Can You Bundle In?
+**What Running Costs Can You Bundle In?**
 
 This is one of the best parts. It's not just the car payment. You can include:
 
@@ -115,7 +115,7 @@ One thing you can't include: the upfront purchase of a home charger. The hardwar
 
 - - -
 
-### Novated Lease vs Buying Outright
+**Novated Lease vs Buying Outright**
 
 |                       | Novated Lease EV           | Cash / Car Loan |
 | --------------------- | -------------------------- | --------------- |
@@ -129,7 +129,7 @@ For most Australian employees earning above $70,000, the novated lease wins fina
 
 - - -
 
-### What Happens If You Change Jobs?
+**What Happens If You Change Jobs?**
 
 This is the question most guides skip over. It's important.
 
@@ -143,7 +143,7 @@ This is a real risk if you're in a volatile industry or planning a career change
 
 - - -
 
-### The Thing Nobody Tells You About Reportable Fringe Benefits
+**The Thing Nobody Tells You About Reportable Fringe Benefits**
 
 Even though your EV is FBT-exempt, it still shows up on your income statement as a reportable fringe benefit. This doesn't change your actual tax — but it can affect:
 
@@ -156,25 +156,29 @@ If any of those apply to your situation, talk to your accountant before signing.
 
 - - -
 
-### What About the FBT Review?
+**What's Actually Happening With the FBT Exemption**
 
-The honest answer is nobody knows what's going to happen.
+The government has now confirmed a phased wind-back of the EV FBT exemption. Here's what's locked in:
 
-In December 2025, the government announced a formal review of the EV FBT exemption. Submissions closed in February 2026. The final report is due by mid-2027.
+**Phase 1 — Now until 31 March 2027** Nothing changes. Full FBT exemption still applies for all eligible EVs under the LCT threshold. If you're considering a novated lease, this is the most favourable window.
 
-The exemption is fully in force right now. It will stay that way until any changes are legislated — which can't happen before the review reports. Vehicles already under a novated lease are expected to be protected if the rules change, but that's not legally confirmed.
+**Phase 2 — 1 April 2027 to 31 March 2029** The full exemption splits based on vehicle price. EVs under $75,000 keep the full exemption. EVs between $75,000 and the LCT threshold drop to a 25% FBT discount only. If you're eyeing something like a Tesla Model Y Long Range or a Polestar 3, the tax maths changes noticeably from this point.
 
-If you're considering a novated lease, the window is open now. Acting sooner locks in the current benefit for the full term of your lease.
+**Phase 3 — From 1 April 2029** The full exemption ends for everyone. All eligible EVs below the LCT threshold move to a 25% FBT discount permanently.
+
+The good news if you're already in a lease — existing arrangements are expected to be grandfathered, meaning the rules that applied when you signed should continue for the life of your lease.
+
+What this means practically: if you're looking at an EV under $75k, you've got until April 2029 before the benefit changes. If you're looking at something above $75k, your window for full exemption closes March 2027. Either way, acting sooner locks in better terms for the full lease term.
 
 - - -
 
-### Frequently Asked Questions
+**Frequently Asked Questions**
 
 **Is a novated lease worth it for EVs in Australia?** For most employees earning above $70,000 with access to salary packaging — yes. The FBT exemption combined with pre-tax payments produces savings that are hard to replicate any other way.
 
 **Can I include home charging costs?** Yes. Ongoing electricity costs from charging can be bundled. The charger hardware itself cannot.
 
-**Will the FBT exemption end?** It's under government review with a report due mid-2027. The exemption is fully active right now and your existing lease would likely be grandfathered if rules change.
+**Will the FBT exemption end?** The government has confirmed a phased wind-back. Full exemption runs until March 2027 for all eligible EVs, then splits based on whether your EV is under or over $75k, before moving to a 25% discount for everyone from April 2029. Existing leases are expected to be grandfathered.
 
 **What if my employer doesn't offer salary packaging?** You can't access a novated lease. Speak to HR — sometimes employers will set it up if an employee requests it, particularly at smaller businesses.
 
@@ -182,7 +186,7 @@ If you're considering a novated lease, the window is open now. Acting sooner loc
 
 - - -
 
-### How to Get Started
+**How to Get Started**
 
 1. Ask HR if your employer offers salary packaging
 2. Pick an eligible EV under $91,387 — confirm the total on-road price including all accessories
@@ -192,12 +196,12 @@ If you're considering a novated lease, the window is open now. Acting sooner loc
 
 - - -
 
-### The Bottom Line
+**The Bottom Line**
 
-A novated lease on an eligible EV is the single most effective way to buy an electric vehicle in Australia right now — if you're an employee with access to salary packaging.
+A novated lease on an eligible EV is still the single most effective way to buy an electric vehicle in Australia — if you're an employee with access to salary packaging.
 
-The combination of zero FBT and pre-tax lease payments can save you $13,000 to $25,000+ over a 3-year lease. The exemption is under review and may change. The smart move is to understand your numbers now and act while the window is open.
+The combination of zero FBT and pre-tax lease payments can save you $13,000 to $25,000+ over a 3-year lease. The exemption is being wound back in phases and the timeline is now confirmed. The smart move is to understand your numbers now and act while the full exemption window is still open.
 
 Start with the calculator — it takes 2 minutes and gives you a real estimate based on your situation.
 
-[evclear.com.au/calculator](evclear.com.au/calculator)
+[evclear.com.au/calculator](https://evclear.com.au/calculator)
