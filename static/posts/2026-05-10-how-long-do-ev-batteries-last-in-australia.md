@@ -8,7 +8,6 @@ excerpt: Worried about how long an EV battery will last in Australia's heat?
   decision.
 readtime: 7 min read
 ---
-Body:
 Battery life is one of the biggest concerns Australians have before buying an EV. Will it degrade in the heat? How much range will I lose after 5 years? What happens if it needs replacing?
 The good news is the real-world data is a lot more reassuring than most people expect. Here's what actually happens to EV batteries over time — and what it means if you're considering buying one in Australia.
 
