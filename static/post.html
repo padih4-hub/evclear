@@ -215,7 +215,7 @@
       
       // Render markdown with HTML enabled
       const renderer = new marked.Renderer();
-      document.getElementById('article-content').innerHTML = marked.parse(content, { renderer });
+      document.getElementById('article-content').innerHTML = marked.parse(content.replace(/\n\n/g, '\n\n<br>\n\n'), { renderer });
       
       // Show article
       document.getElementById('loading').style.display = 'none';
