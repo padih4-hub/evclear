@@ -42,10 +42,26 @@ The reassuring answer: every modern EV sold in Australia uses active liquid cool
 Older EVs with passive air cooling (like early Nissan Leafs) were genuinely susceptible to heat degradation in Australian conditions. Modern EVs are not — the thermal management systems are specifically designed for this.
 The practical tip for Australian owners: avoid leaving your car parked in direct sun at high state of charge for extended periods. Park in the shade or a garage when possible. This is less about the heat itself and more about the combination of heat and high battery charge level, which does accelerate degradation over time.
 
-Battery Warranties in Australia
-Every major EV brand sold in Australia covers the battery under warranty. Here's what the main ones offer:
-BrandBattery WarrantyMinimum Capacity GuaranteeTesla8 years / 160,000km70%BYD8 years / 160,000km70%Hyundai8 years / 160,000km70%Kia7 years / 150,000km70%MG8 years / 160,000km70%Polestar8 years / 160,000km70%Volvo8 years / 160,000km70%
-The 70% threshold means if your battery drops below 70% of its original capacity within the warranty period, the manufacturer replaces it. Given that real-world data shows most EVs sitting at 81-88% after 8 years, most owners will never need to make a warranty claim.
+<div style="overflow-x:auto; margin: 32px 0;">
+<table>
+<thead>
+<tr>
+<th>Brand</th>
+<th>Battery Warranty</th>
+<th>Minimum Capacity Guarantee</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Tesla</td><td>8 years / 160,000km</td><td>70%</td></tr>
+<tr><td>BYD</td><td>8 years / 160,000km</td><td>70%</td></tr>
+<tr><td>Hyundai</td><td>8 years / 160,000km</td><td>70%</td></tr>
+<tr><td>Kia</td><td>7 years / 150,000km</td><td>70%</td></tr>
+<tr><td>MG</td><td>8 years / 160,000km</td><td>70%</td></tr>
+<tr><td>Polestar</td><td>8 years / 160,000km</td><td>70%</td></tr>
+<tr><td>Volvo</td><td>8 years / 160,000km</td><td>70%</td></tr>
+</tbody>
+</table>
+</div>
 
 What Affects Battery Life the Most?
 Five things have the biggest impact on how long your EV battery lasts:
