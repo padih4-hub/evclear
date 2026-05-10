@@ -27,7 +27,7 @@ The Lineup — What You're Actually Choosing Between
       <li>Atto 2 — from $38,990</li>
     </ul>
   </div>
-  <div class="compare-card highlight">
+  <div class="compare-card">
     <div class="badge">Tesla</div>
     <h4>Main Models in Australia</h4>
     <ul>
