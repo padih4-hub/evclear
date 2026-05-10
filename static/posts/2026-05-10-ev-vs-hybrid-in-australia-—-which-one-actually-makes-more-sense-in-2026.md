@@ -141,7 +141,7 @@ The honest truth: for most Australian employees in metro areas with home chargin
 
 Frequently Asked Questions
 
-html<div style="margin: 32px 0;">
+<div style="margin: 32px 0;">
 <div style="border: 1px solid rgba(168,255,120,0.12); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;">
 <p style="color: #ffffff; font-weight: 500; margin-bottom: 8px;">Is a hybrid or EV better for Australia?</p>
 <p style="color: #e8ede6; margin: 0;">Depends on your situation. EVs win on running costs and tax benefits for employees with salary packaging. Hybrids win on simplicity, upfront cost, and suitability for long regional drives.</p>
