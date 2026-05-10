@@ -87,7 +87,8 @@ For most east coast routes the coverage is now good enough that range anxiety is
 
 #### Sydney to Melbourne (878km)
 
-The most travelled highway route in Australia and well served for EV charging. Multiple fast chargers along the Hume Highway at Goulburn, Holbrook, Wodonga, and other stops. Doable in a day with 2-3 charging stops in a long-range EV. Shorter range EVs may need an extra stop.\
+The most travelled highway route in Australia and well served for EV charging. Multiple fast chargers along the Hume Highway at Goulburn, Holbrook, Wodonga, and other stops. Doable in a day with 2-3 charging stops in a long-range EV. Shorter range EVs may need an extra stop.
+
 \
 <div style="overflow-x:auto; margin: 32px 0;">
 <table>
@@ -110,8 +111,8 @@ The most travelled highway route in Australia and well served for EV charging. M
 
 #### Brisbane to Sydney (920km)
 
-Well covered along the Pacific Highway and New England Highway. Key charging stops at Coffs Harbour, Port Macquarie, Newcastle, and several others. Allow 2-3 charging stops for a long-range EV.\
-\
+Well covered along the Pacific Highway and New England Highway. Key charging stops at Coffs Harbour, Port Macquarie, Newcastle, and several others. Allow 2-3 charging stops for a long-range EV.
+
 <div style="overflow-x:auto; margin: 32px 0;">
 <table>
 <thead>
@@ -133,8 +134,8 @@ Well covered along the Pacific Highway and New England Highway. Key charging sto
 
 #### Melbourne to Adelaide (727km)
 
-Serviceable but thinner coverage than the east coast corridors. Plan carefully through regional Victoria and the Dukes Highway. Chargefox and Evie have key stops along this route.\
-\
+Serviceable but thinner coverage than the east coast corridors. Plan carefully through regional Victoria and the Dukes Highway. Chargefox and Evie have key stops along this route.
+
 <div style="overflow-x:auto; margin: 32px 0;">
 <table>
 <thead>
@@ -156,8 +157,8 @@ Serviceable but thinner coverage than the east coast corridors. Plan carefully t
 
 #### Perth to Margaret River (280km)
 
-Easy and well covered. Multiple chargers in Mandurah, Bunbury, and Margaret River itself. No range anxiety for any modern EV.\
-\
+Easy and well covered. Multiple chargers in Mandurah, Bunbury, and Margaret River itself. No range anxiety for any modern EV.
+
 <div style="overflow-x:auto; margin: 32px 0;">
 <table>
 <thead>
