@@ -96,17 +96,34 @@ Avoid leaving the car at very low charge (under 10%) for extended periods
 Keep the car plugged in when parked in extreme heat — the thermal management system runs on grid power to keep the battery cool
 
 
-Frequently Asked Questions
-How long do EV batteries last in Australia?
-Most modern EV batteries last 15-20 years in typical use. Real-world data shows average capacity of around 81% after 8 years — well above the 70% warranty threshold.
-Does Australian heat damage EV batteries?
-Modern EVs use active liquid cooling that manages battery temperature regardless of ambient conditions. Heat is not the concern it was for older EVs with passive air cooling.
-What happens when an EV battery dies?
-Gradual degradation means range reduces over time rather than sudden failure. If capacity drops below 70% within the warranty period the manufacturer replaces it. Out of warranty replacement runs roughly $10,000-$20,000 AUD.
-Is it worth buying an EV because of battery concerns?
-For new EVs in 2026 — yes. Battery technology and warranties have matured to the point where degradation shouldn't be a deciding factor for new car buyers.
-Can I extend my EV battery life?
-Yes — keeping daily charge between 20-80%, charging at home on AC, and parking in shade in hot weather all help extend battery life meaningfully.
+<div style="margin: 32px 0;">
+
+<div style="border: 1px solid rgba(168,255,120,0.12); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;">
+<p style="color: #ffffff; font-weight: 500; margin-bottom: 8px;">How long do EV batteries last in Australia?</p>
+<p style="color: #e8ede6; margin: 0;">Most modern EV batteries last 15-20 years in typical use. Real-world data shows average capacity of around 81% after 8 years — well above the 70% warranty threshold.</p>
+</div>
+
+<div style="border: 1px solid rgba(168,255,120,0.12); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;">
+<p style="color: #ffffff; font-weight: 500; margin-bottom: 8px;">Does Australian heat damage EV batteries?</p>
+<p style="color: #e8ede6; margin: 0;">Modern EVs use active liquid cooling that manages battery temperature regardless of ambient conditions. Heat is not the concern it was for older EVs with passive air cooling.</p>
+</div>
+
+<div style="border: 1px solid rgba(168,255,120,0.12); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;">
+<p style="color: #ffffff; font-weight: 500; margin-bottom: 8px;">What happens when an EV battery dies?</p>
+<p style="color: #e8ede6; margin: 0;">Gradual degradation means range reduces over time rather than sudden failure. If capacity drops below 70% within the warranty period the manufacturer replaces it. Out of warranty replacement runs roughly $10,000-$20,000 AUD.</p>
+</div>
+
+<div style="border: 1px solid rgba(168,255,120,0.12); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;">
+<p style="color: #ffffff; font-weight: 500; margin-bottom: 8px;">Is it worth buying an EV because of battery concerns?</p>
+<p style="color: #e8ede6; margin: 0;">For new EVs in 2026 — yes. Battery technology and warranties have matured to the point where degradation shouldn't be a deciding factor for new car buyers.</p>
+</div>
+
+<div style="border: 1px solid rgba(168,255,120,0.12); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;">
+<p style="color: #ffffff; font-weight: 500; margin-bottom: 8px;">Can I extend my EV battery life?</p>
+<p style="color: #e8ede6; margin: 0;">Yes — keeping daily charge between 20-80%, charging at home on AC, and parking in shade in hot weather all help extend battery life meaningfully.</p>
+</div>
+
+</div>
 
 The Bottom Line
 EV battery anxiety is understandable but largely outdated for modern vehicles. Real-world data consistently shows gradual, predictable degradation well within acceptable ranges — and 8-year warranties provide solid protection for the ownership period most Australians keep a car.
