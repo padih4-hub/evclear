@@ -2,20 +2,11 @@
 title: Is Now a Good Time to Buy an EV in Australia?
 date: 2026-05-10T11:52:25.917Z
 category: Buying Guide
+image: /images/c79e3def-f156-4dd6-9d00-6daf2d401f63.png
 excerpt: Waiting for prices to drop or tech to improve? Here's the honest answer
   on whether now is actually a good time to buy an EV in Australia in 2026.
 readtime: 6 min read
 ---
-Here it is — one clean copy and paste:
-
-Title: Is Now a Good Time to Buy an EV in Australia?
-Date: 2026-05-10
-Category: Buying Guide
-Featured Image: Search "electric car dealership australia 2026" on Unsplash
-Excerpt: Waiting for prices to drop or tech to improve? Here's the honest answer on whether now is actually a good time to buy an EV in Australia in 2026.
-Read Time: 6 min read
-Body — paste this into markdown mode:
-
 If you've been thinking about buying an EV but keep telling yourself you'll wait until the technology improves or prices drop, this article is for you.
 It's a reasonable instinct. EVs are evolving fast and nobody wants to buy the wrong thing at the wrong time. But there's a real cost to waiting that most people don't factor in — and in 2026, the case for buying now is stronger than it's ever been.
 Here's the honest breakdown.
