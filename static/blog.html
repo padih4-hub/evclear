@@ -110,7 +110,8 @@
       const response = await fetch('/posts.json');
       if (!response.ok) throw new Error('Could not load posts');
       const posts = await response.json();
-      const grid = document.getElementById('articles-grid');
+      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+const grid = document.getElementById('articles-grid');
       if (posts.length === 0) {
         grid.innerHTML = '<p class="no-articles">No articles yet. Check back soon.</p>';
         return;
