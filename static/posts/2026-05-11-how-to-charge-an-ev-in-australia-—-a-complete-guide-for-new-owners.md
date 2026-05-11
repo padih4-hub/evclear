@@ -28,7 +28,6 @@ A dedicated wall-mounted charger installed by a licensed electrician. Adds rough
 
 The fast chargers you find at shopping centres, service stations, and highway stops. Depending on your car and the charger speed, you can add 100-300km of range in 20-30 minutes. Used for top-ups on the go or during road trips — not for daily charging.
 
-\
 <div style="overflow-x:auto; margin: 32px 0;">
 <table>
 <thead>
