@@ -1,6 +1,6 @@
 ---
 title: How to Charge an EV in Australia — A Complete Guide for New Owners
-date: 2026-05-11T20:26:04.873Z
+date: 2026-05-12T20:26:04.873Z
 category: Charging
 image: /images/33e94772-2f69-4487-88b3-2fdfbc118794.png
 excerpt: New to EVs and not sure how charging actually works in Australia?
