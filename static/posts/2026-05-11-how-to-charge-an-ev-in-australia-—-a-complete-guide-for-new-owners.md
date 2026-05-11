@@ -28,6 +28,26 @@ A dedicated wall-mounted charger installed by a licensed electrician. Adds rough
 
 The fast chargers you find at shopping centres, service stations, and highway stops. Depending on your car and the charger speed, you can add 100-300km of range in 20-30 minutes. Used for top-ups on the go or during road trips — not for daily charging.
 
+\
+<div style="overflow-x:auto; margin: 32px 0;">
+<table>
+<thead>
+<tr>
+<th>Charger Type</th>
+<th>Speed</th>
+<th>Range Per Hour</th>
+<th>Time for Full Charge</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Standard Power Point</td><td>2.4kW</td><td>10-15km</td><td>8-12 hours</td><td>Overnight backup</td></tr>
+<tr><td>Home Wall Charger</td><td>7kW</td><td>40-50km</td><td>4-6 hours</td><td>Daily home charging</td></tr>
+<tr><td>DC Fast Charger</td><td>50-350kW</td><td>200-600km</td><td>20-45 mins</td><td>Road trips and top-ups</td></tr>
+</tbody>
+</table>
+</div>
+
 - - -
 
 ### Home Charging — The Foundation
