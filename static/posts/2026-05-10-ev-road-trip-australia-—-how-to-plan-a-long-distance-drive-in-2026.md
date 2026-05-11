@@ -1,6 +1,6 @@
 ---
 title: EV Road Trip Australia — How to Plan a Long Distance Drive in 2026
-date: 2026-05-10T20:39:35.374Z
+date: 2026-05-11T20:39:35.374Z
 category: Buying Guide
 image: /images/3f3c3018-1c6c-43da-bb6f-73df3eaac177.png
 excerpt: Planning an EV road trip in Australia? Here's exactly how to do it —
