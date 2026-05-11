@@ -96,6 +96,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://evclear.com.au/posts/2026-05-10-ev-road-trip-australia-%E2%80%94-how-to-plan-a-long-distance-drive-in-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evclear.com.au/posts/2026-05-11-what-to-look-for-when-buying-a-used-ev-in-australia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
