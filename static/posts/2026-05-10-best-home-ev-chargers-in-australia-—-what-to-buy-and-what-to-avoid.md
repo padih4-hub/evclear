@@ -1,6 +1,6 @@
 ---
 title: Best Home EV Chargers in Australia — What to Buy and What to Avoid
-date: 2026-05-10T20:39:06.908Z
+date: 2026-05-11T20:39:06.908Z
 category: Charging
 image: /images/0d52510b-3965-43a2-b34f-d0d7528c9f26.png
 excerpt: Not all home EV chargers are worth buying. Here's what actually
