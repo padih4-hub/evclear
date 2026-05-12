@@ -10,7 +10,7 @@ readtime: 8 min read
 ---
 Price is still the number one barrier stopping Australians from buying an EV. And honestly? That hesitation made sense two years ago. It doesn't anymore.
 
-The affordable EV market in Australia has reached a significant milestone in 2026, with 2 electric vehicles now priced under $30,000 and 20 models under $40,000. That's a fundamentally different market to what existed even 18 months ago. [UpPromote](https://uppromote.com/affiliate-programs/australia/)
+The affordable EV market in Australia has reached a significant milestone in 2026, with 2 electric vehicles now priced under $30,000 and 20 models under $40,000. That's a fundamentally different market to what existed even 18 months ago.
 
 Here's the honest guide to what EVs actually cost in Australia right now — by budget, by category, and with the real numbers included.
 
@@ -18,11 +18,11 @@ Here's the honest guide to what EVs actually cost in Australia right now — by 
 
 ### The Price Floor Has Dropped Dramatically
 
-The BYD Atto 1 is priced from $23,990 plus on-road costs — the lowest price ever seen in Australia for a new electric car. [Aus Asia Online](https://www.ausasiaonline.com.au/affiliate-marketing-programs-australia/)
+The BYD Atto 1 is priced from $23,990 plus on-road costs — the lowest price ever seen in Australia for a new electric car.
 
 That number matters because it reframes the whole conversation. An EV is no longer automatically a premium purchase. It's now a legitimate option at the same price point as a base model petrol hatchback.
 
-A standard mid-spec petrol hatchback now averages $32,000, while the MG4 Excite is actively selling for just $35,677 driveaway. The price gap that used to define the EV conversation has largely closed. [FroggyAds](https://froggyads.com/blog/best-affiliate-marketing-programs-australia/)
+A standard mid-spec petrol hatchback now averages $32,000, while the MG4 Excite is actively selling for just $35,677 driveaway. The price gap that used to define the EV conversation has largely closed. [](https://froggyads.com/blog/best-affiliate-marketing-programs-australia/)
 
 - - -
 
@@ -53,7 +53,7 @@ The Sub-$40k Sweet Spot
 
 The MG4 EV Urban stands out as the best all-round affordable EV in 2026, offering more range, more space and a more complete package without stretching too far beyond $30k driveaway. [](https://www.shopify.com/au/blog/start-affiliate-marketing-with-no-money)
 
-The BYD Atto 2 is Australia's cheapest electric SUV, starting at $31,990 plus on-road costs. For buyers who want SUV practicality without spending $50k, that's a genuine option that didn't exist 18 months ago. [Aus Asia Online](https://www.ausasiaonline.com.au/affiliate-marketing-programs-australia/)
+The BYD Atto 2 is Australia's cheapest electric SUV, starting at $31,990 plus on-road costs. For buyers who want SUV practicality without spending $50k, that's a genuine option that didn't exist 18 months ago. [](https://www.ausasiaonline.com.au/affiliate-marketing-programs-australia/)
 
 For anyone doing mostly city and suburban driving under 300km a week with access to home charging, the sub-$40k options are now genuinely compelling — not compromise purchases.
 
