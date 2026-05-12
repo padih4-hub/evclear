@@ -47,8 +47,9 @@ A standard mid-spec petrol hatchback now averages $32,000, while the MG4 Excite 
 <tr><td>$65k–$80k</td><td>Tesla Model Y / Hyundai Ioniq 6</td><td>519–614km</td><td>Best long distance capability</td></tr>
 </tbody>
 </table>
-</div>\
-\
+</div>
+
+
 The Sub-$40k Sweet Spot
 
 The MG4 EV Urban stands out as the best all-round affordable EV in 2026, offering more range, more space and a more complete package without stretching too far beyond $30k driveaway. [Shopify](https://www.shopify.com/au/blog/start-affiliate-marketing-with-no-money)
@@ -71,8 +72,8 @@ For a full breakdown of how that works, run your numbers at [evclear.com.au/calc
 
 ### The Real Cost Question — Purchase Price vs Total Cost
 
-Sticker price is only part of the story. Here's what changes when you look at total cost of ownership:\
-\
+Sticker price is only part of the story. Here's what changes when you look at total cost of ownership:
+
 <div style="overflow-x:auto; margin: 32px 0;">
 <table>
 <thead>
@@ -91,8 +92,9 @@ Sticker price is only part of the story. Here's what changes when you look at to
 <tr><td>Novated lease tax benefit</td><td>Up to $25,000</td><td>None</td></tr>
 </tbody>
 </table>
-</div>\
-\
+</div>
+
+
 When you factor in fuel and servicing savings, an EV that costs $5,000 more upfront typically pays that back within 2-3 years and keeps saving after that.
 
 - - -
