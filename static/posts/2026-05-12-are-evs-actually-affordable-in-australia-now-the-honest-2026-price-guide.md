@@ -49,10 +49,9 @@ A standard mid-spec petrol hatchback now averages $32,000, while the MG4 Excite 
 </table>
 </div>
 
-
 The Sub-$40k Sweet Spot
 
-The MG4 EV Urban stands out as the best all-round affordable EV in 2026, offering more range, more space and a more complete package without stretching too far beyond $30k driveaway. [Shopify](https://www.shopify.com/au/blog/start-affiliate-marketing-with-no-money)
+The MG4 EV Urban stands out as the best all-round affordable EV in 2026, offering more range, more space and a more complete package without stretching too far beyond $30k driveaway. [](https://www.shopify.com/au/blog/start-affiliate-marketing-with-no-money)
 
 The BYD Atto 2 is Australia's cheapest electric SUV, starting at $31,990 plus on-road costs. For buyers who want SUV practicality without spending $50k, that's a genuine option that didn't exist 18 months ago. [Aus Asia Online](https://www.ausasiaonline.com.au/affiliate-marketing-programs-australia/)
 
@@ -93,7 +92,6 @@ Sticker price is only part of the story. Here's what changes when you look at to
 </tbody>
 </table>
 </div>
-
 
 When you factor in fuel and servicing savings, an EV that costs $5,000 more upfront typically pays that back within 2-3 years and keeps saving after that.
 
