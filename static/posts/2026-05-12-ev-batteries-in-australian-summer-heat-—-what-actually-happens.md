@@ -47,9 +47,11 @@ Real-world data from Australian EV owners consistently shows battery degradation
 
 The key factor is the thermal management system. Here's how the main brands compare:
 
-\
-<div style="overflow-x:auto; margin: 32px 0;"> <table> <thead> <tr> <th>Brand / Model</th> <th>Cooling Type</th> <th>Heat Performance</th> </tr> </thead> <tbody> <tr><td>Tesla Model 3 / Y</td><td>Active liquid cooling</td><td>Excellent — preconditioning built in</td></tr> <tr><td>BYD Seal / Atto 3</td><td>Active liquid cooling</td><td>Excellent — Blade battery handles heat well</td></tr> <tr><td>Hyundai Ioniq 5 / 6</td><td>Active liquid cooling</td><td>Excellent — 800V architecture efficient in heat</td></tr> <tr><td>Kia EV6 / EV5</td><td>Active liquid cooling</td><td>Excellent — same platform as Ioniq</td></tr> <tr><td>MG4</td><td>Active liquid cooling</td><td>Good — adequate for Australian conditions</td></tr> <tr><td>Nissan Leaf (pre-2020)</td><td>Passive air cooling</td><td>Poor — known degradation issues in heat</td></tr> <tr><td>Nissan Leaf (2020+)</td><td>Passive air cooling</td><td>Moderate — improved but still air cooled</td></tr> </tbody> </table> </div>\
-\
+
+
+<div style="overflow-x:auto; margin: 32px 0;"> <table> <thead> <tr> <th>Brand / Model</th> <th>Cooling Type</th> <th>Heat Performance</th> </tr> </thead> <tbody> <tr><td>Tesla Model 3 / Y</td><td>Active liquid cooling</td><td>Excellent — preconditioning built in</td></tr> <tr><td>BYD Seal / Atto 3</td><td>Active liquid cooling</td><td>Excellent — Blade battery handles heat well</td></tr> <tr><td>Hyundai Ioniq 5 / 6</td><td>Active liquid cooling</td><td>Excellent — 800V architecture efficient in heat</td></tr> <tr><td>Kia EV6 / EV5</td><td>Active liquid cooling</td><td>Excellent — same platform as Ioniq</td></tr> <tr><td>MG4</td><td>Active liquid cooling</td><td>Good — adequate for Australian conditions</td></tr> <tr><td>Nissan Leaf (pre-2020)</td><td>Passive air cooling</td><td>Poor — known degradation issues in heat</td></tr> <tr><td>Nissan Leaf (2020+)</td><td>Passive air cooling</td><td>Moderate — improved but still air cooled</td></tr> </tbody> </table> </div>
+
+
 The takeaway: any EV with active liquid cooling — which is every major new model in Australia — handles heat well. The Nissan Leaf is the one to be careful with, particularly pre-2020 models.
 
 - - -
