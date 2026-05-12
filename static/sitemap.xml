@@ -106,6 +106,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://evclear.com.au/posts/2026-05-11-how-to-charge-an-ev-in-australia-a-complete-guide-for-new-owners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evclear.com.au/posts/2026-05-12-ev-batteries-in-australian-summer-heat-%E2%80%94-what-actually-happens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -113,6 +123,6 @@
   <url>
     <loc>https://evclear.com.au/disclaimer</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
