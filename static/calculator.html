@@ -1090,7 +1090,7 @@
     document.getElementById('f-petrol-fuel').textContent = fmt(d.annualPetrol * 5);
     document.getElementById('f-incentives').textContent = '−' + fmt(d.incentiveVal);
     const evTotal = d.evPrice + (d.annualEV * 5) + 3200 - d.incentiveVal;
-    const petrolTotal = d.evPrice + (d.annualPetrol * 5) + 5500;
+    const petrolTotal = (d.evPrice * 0.85) + (d.annualPetrol * 5) + 5500;
     document.getElementById('f-ev-total').textContent = fmt(evTotal);
     document.getElementById('f-petrol-total').textContent = fmt(petrolTotal);
 
