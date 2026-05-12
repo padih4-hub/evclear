@@ -2,6 +2,7 @@
 title: BYD vs Tesla in Australia — Which One Should You Actually Buy?
 date: 2026-05-10T07:46:13.601Z
 category: Buying Guide
+image: /images/feedbbf2-012b-45fb-bdf8-413bce776224.png
 excerpt: BYD or Tesla — which EV is actually worth buying in Australia in 2026?
   We compare price, range, charging, and real-world ownership so you don't have
   to.
