@@ -20,6 +20,7 @@ Before we get into it — if you're considering an EV and want to see what you'd
 ### How Fast Is Australia's EV Market Actually Growing?
 
 ### <div style="background:var(--dark2);border:1px solid var(--border);border-radius:14px;padding:24px;margin:32px 0;">
+
   <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:var(--neon);margin-bottom:20px;">Australian EV Sales Growth</div>
   <div style="display:flex;flex-direction:column;gap:10px;">
     <div style="display:flex;align-items:center;gap:12px;">
