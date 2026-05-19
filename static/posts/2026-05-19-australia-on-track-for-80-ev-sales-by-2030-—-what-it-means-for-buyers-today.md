@@ -1,6 +1,6 @@
 ---
 title: Australia on Track for 80% EV Sales by 2030 — What It Means for Buyers Today
-date: 2026-05-19T11:23:40.036Z
+date: 2026-05-20T11:23:40.036Z
 category: EV News
 image: /images/9f759675-defb-4f3a-8ba0-e47c234b560f.png
 excerpt: Australia could hit 80% EV sales by 2030 if current growth continues.
