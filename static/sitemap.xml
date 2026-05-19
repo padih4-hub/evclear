@@ -151,6 +151,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://evclear.com.au/posts/2026-05-19-new-evs-coming-to-australia-in-2026-%E2%80%94-whats-worth-waiting-for</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
