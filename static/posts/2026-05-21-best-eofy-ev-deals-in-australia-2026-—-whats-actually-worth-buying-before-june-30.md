@@ -1,6 +1,6 @@
 ---
-title: Best EOFY EV Deals in Australia 2026 — What's Actually Worth Buying
-  Before June 30
+title: Best EOFY EV and Hybrid Deals in Australia 2026 — What's Actually Worth
+  Buying Before June 30
 date: 2026-05-21T11:28:27.021Z
 category: Buying Guide
 image: /images/1729b8e0-19a0-40fb-a1d4-e948c6b67a82.png
@@ -11,7 +11,7 @@ readtime: 7 min read
 ---
 End of financial year is one of the best times to buy a new car in Australia — dealers are pushing to hit targets, manufacturers are clearing stock, and some of the finance rates on offer right now are genuinely low.
 
-For EV buyers in 2026 there's an added layer: the EOFY deadline and the FBT window are both in play. Moving before June 30 locks in the current full FBT exemption and takes advantage of the deals below simultaneously.
+For EV buyers in 2026 there's an added layer: the EOFY deadline and the FBT window are both in play. EOFY timing matters because many manufacturers are running aggressive promotions while the current full EV FBT exemption remains available.
 
 Before we get into it — run your numbers at the [EVClear EV Savings Calculator](https://evclear.com.au/calculator) to see what a specific model actually costs you after fuel savings and novated lease benefits. The deals below are even better when the tax saving is factored in.
 
@@ -35,9 +35,7 @@ For a full breakdown of how the novated lease FBT saving works, read the [comple
 
 #### Tesla — Up to $3,000 Trade-In Bonus (Expires June 29)
 
-Tesla is offering a trade-in bonus when you trade in an eligible vehicle toward a new or demonstrator Model 3 or Model Y. The $3,000 bonus applies to the Model 3 RWD and Long Range RWD. The Model Y RWD and Long Range AWD attract a $2,000 bonus.
-
-Order and take delivery by June 29 to be eligible. This is worth factoring in if you have a petrol car to trade — it effectively reduces the purchase price and the novated lease saving on top of that is significant.
+Tesla is currently offering trade-in bonuses on selected new and demonstrator Model Y vehicles in Australia. Eligible buyers trading in a vehicle can receive up to $2,000 off depending on the variant and delivery timing. Order and take delivery by June 29 to be eligible.
 
 - - -
 
@@ -53,7 +51,7 @@ The Geely EX5 starts from $40,990 and sits comfortably under the $75,000 FBT thr
 
 Toyota is offering private buyers up to $12,500 in combined value on the upgraded 2026 bZ4X. This includes a complimentary home charger or Chargefox voucher plus finance deposit contributions of $5,000 for 2WD models and $7,500 for AWD.
 
-The updated bZ4X now has a 74.7kWh battery with up to 591km of range — a meaningful improvement over the previous version. This deal runs until December but if you're considering a Toyota EV, acting before June 30 also locks in the current FBT position.
+The updated bZ4X now has a 74.7kWh battery with up to approximately 590km WLTP depending on variant — a meaningful improvement over the previous version. This deal runs until December but if you're considering a Toyota EV, acting before June 30 also locks in the current FBT position.
 
 - - -
 
@@ -149,7 +147,9 @@ Yes — in most cases. The BYD 5% fleet discount is specifically designed for no
 
 - - -
 
-### The Bottom Line
+### Offers are subject to change and dealer availability. Verify terms directly with manufacturers or dealers before purchasing. EVClear is not a financial adviser.\
+\
+The Bottom Line
 
 EOFY 2026 has some genuinely strong EV deals across multiple brands. The BYD combined offer is the standout for novated lease buyers. The Geely finance deal is the best option for cash or finance buyers. The Nissan and Zeekr deals expire May 31 so those need immediate action.
 
