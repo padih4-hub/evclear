@@ -1,6 +1,5 @@
 ---
-title: Best EOFY EV and Hybrid Deals in Australia 2026 — What's Actually Worth
-  Buying Before June 30
+title: Best EOFY EV and Hybrid Deals in Australia 2026
 date: 2026-05-21T11:28:27.021Z
 category: Buying Guide
 image: /images/1729b8e0-19a0-40fb-a1d4-e948c6b67a82.png
