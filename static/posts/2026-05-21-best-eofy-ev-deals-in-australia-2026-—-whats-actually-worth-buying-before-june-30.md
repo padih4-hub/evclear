@@ -21,13 +21,13 @@ Before we get into it — run your numbers at the [EVClear EV Savings Calculator
 
 #### BYD — $3,000 Cashback + 1.88% Finance + 5% Novated Fleet Discount
 
-BYD is running three separate offers simultaneously and they can stack depending on how you're buying.
+BYD is running EOFY deals across both its PHEV and BEV ranges.
 
-The $3,000 cashback applies to the Sealion 5, Sealion 6, Sealion 8, and Shark 6 Premium and is applied at time of purchase. Available at participating BYD dealers until June 30.
+The $3,000 cashback applies to the Shark 6 Premium, Sealion 5, Sealion 6, and Sealion 8 — all of which are plug-in hybrid vehicles, not full EVs. Available until June 30, but note the cashback cannot be combined with other promotions and excludes fleet and novated lease buyers.
 
-On top of that, BYD is offering a 1.88% p.a. comparison rate on a 3-year loan term across selected new models including the Sealion range. No minimum deposit and no balloon payment required. Available until June 29.
+For BEV buyers on a novated lease — the Sealion 7, Seal, Dolphin, Atto 3, Atto 2, and Atto 1 are the full EVs and qualify for the FBT exemption. BYD is also offering a 1.88% p.a. comparison rate on a 3-year loan term across selected models including the Sealion range. No minimum deposit and no balloon required. Available until June 29.
 
-For novated lease buyers specifically, BYD is also offering a 5% fleet discount on its full EV range through approved Fleet Management Organisations — saving over $2,900 depending on the model. Combined with the FBT exemption, this is one of the strongest EOFY EV deals available right now.
+Also note — BYD is offering a separate 5% fleet discount on its full range for novated lease buyers through approved Fleet Management Organisations until June 30. This applies to the BEV models specifically and cannot be stacked with the cashback offer.
 
 For a full breakdown of how the novated lease FBT saving works, read the [complete novated lease guide on EVClear](https://evclear.com.au/posts/2026-05-04-novated-lease-ev-australia-2026-how-it-works-what-you-save-and-what-to-watch-out-for).
 
