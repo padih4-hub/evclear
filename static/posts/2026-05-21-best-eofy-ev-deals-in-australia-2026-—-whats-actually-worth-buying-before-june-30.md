@@ -147,9 +147,9 @@ Yes — in most cases. The BYD 5% fleet discount is specifically designed for no
 
 - - -
 
-### Offers are subject to change and dealer availability. Verify terms directly with manufacturers or dealers before purchasing. EVClear is not a financial adviser.\
-\
-The Bottom Line
+### Offers are subject to change and dealer availability. Verify terms directly with manufacturers or dealers before purchasing. EVClear is not a financial adviser
+
+### The Bottom Line
 
 EOFY 2026 has some genuinely strong EV deals across multiple brands. The BYD combined offer is the standout for novated lease buyers. The Geely finance deal is the best option for cash or finance buyers. The Nissan and Zeekr deals expire May 31 so those need immediate action.
 
