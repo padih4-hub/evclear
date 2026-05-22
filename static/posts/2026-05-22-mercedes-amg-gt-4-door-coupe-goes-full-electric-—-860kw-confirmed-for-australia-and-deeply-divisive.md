@@ -64,6 +64,10 @@ The honest take is that it photographs differently depending on the angle and li
 
 ![](/images/2027-mercedes-amg-gt-4-door-002-1080.jpg)
 
+![](/images/26c0129_015.jpg)
+
+![](/images/26c0129_019.jpg)
+
 - - -
 
 ### What This Means for the Australian Market
