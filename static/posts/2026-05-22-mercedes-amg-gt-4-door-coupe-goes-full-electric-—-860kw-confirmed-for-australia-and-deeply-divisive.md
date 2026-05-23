@@ -15,21 +15,6 @@ The design, however, is already splitting opinion everywhere it's been posted.
 
 This isn't an EV that's relevant to most Australian buyers — with pricing expected well north of $400,000 based on the outgoing V8 model — but it matters for a different reason. It signals where the performance car world is heading, and it does it in a way that's hard to ignore.
 
-<div class="gallery-slider">
-  <div class="gallery-track">
-    <img src="YOUR_IMAGE_1_URL" alt="Mercedes-AMG GT 4-Door Coupe front">
-    <img src="YOUR_IMAGE_2_URL" alt="Mercedes-AMG GT 4-Door Coupe interior">
-    <img src="YOUR_IMAGE_3_URL" alt="Mercedes-AMG GT 4-Door Coupe rear">
-  </div>
-  <button class="gallery-btn gallery-prev">&#8592;</button>
-  <button class="gallery-btn gallery-next">&#8594;</button>
-  <div class="gallery-dots">
-    <div class="gallery-dot"></div>
-    <div class="gallery-dot"></div>
-    <div class="gallery-dot"></div>
-  </div>
-</div>
-
 - - -
 
 ### The Specs — What Makes This Car Significant
