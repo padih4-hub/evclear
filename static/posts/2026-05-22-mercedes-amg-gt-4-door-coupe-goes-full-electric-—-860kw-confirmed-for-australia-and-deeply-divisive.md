@@ -3,7 +3,7 @@ title: Mercedes-AMG GT 4-Door Coupe Goes Full Electric — 860kW, Confirmed for
   Australia and Deeply Divisive
 date: 2026-05-22T23:41:17.891Z
 category: EV News
-image: ""
+image: /images/2027-mercedes-amg-gt-4-door-001-1080.jpg
 gallery:
   - /images/2027-mercedes-amg-gt-4-door-001-1080.jpg
   - /images/2027-mercedes-amg-gt-4-door-002-1080.jpg
