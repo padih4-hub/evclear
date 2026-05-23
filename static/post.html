@@ -74,7 +74,7 @@
   .article-content tbody td { padding: 14px 18px; color: var(--text); vertical-align: middle; }
   .article-content tbody td:first-child { color: var(--white); font-weight: 500; }
 
-  /* Comparison card styles for inline HTML */
+  /* Comparison card styles */
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
   .compare-card { background: var(--dark2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
   .compare-card.highlight { border-color: var(--neon); }
@@ -91,6 +91,18 @@
   .stat-box { background: var(--dark2); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
   .stat-box .stat-number { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2rem; color: var(--neon); line-height: 1; margin-bottom: 8px; }
   .stat-box .stat-label { font-size: 0.8rem; color: var(--muted); }
+
+  /* Image Gallery Slider */
+  .gallery-slider { position: relative; width: 100%; margin: 32px 0; border-radius: 12px; overflow: hidden; }
+  .gallery-track { display: flex; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .gallery-track img { min-width: 100%; height: 460px; object-fit: cover; border-radius: 12px; margin: 0; }
+  .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(13,15,12,0.8); border: 1px solid var(--border); color: var(--neon); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 10; }
+  .gallery-btn:hover { background: var(--dark2); border-color: var(--neon); }
+  .gallery-prev { left: 16px; }
+  .gallery-next { right: 16px; }
+  .gallery-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; padding-bottom: 4px; }
+  .gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.2s; border: 1px solid var(--muted); }
+  .gallery-dot.active { background: var(--neon); border-color: var(--neon); }
 
   .article-cta { background: var(--dark2); border: 1px solid var(--border); border-radius: 12px; padding: 40px; margin: 48px 0; text-align: center; }
   .article-cta h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--white); margin-bottom: 12px; }
@@ -111,6 +123,7 @@
     .article-featured-img img { height: 240px; }
     .compare-grid { grid-template-columns: 1fr; }
     .stat-row { grid-template-columns: 1fr 1fr; }
+    .gallery-track img { height: 240px; }
   }
 </style>
 </head>
@@ -161,7 +174,6 @@
 </footer>
 
 <script>
-  // Configure marked to allow HTML and enable GFM tables
   marked.setOptions({
     gfm: true,
     breaks: false,
@@ -171,56 +183,68 @@
     pedantic: false
   });
 
-  // Get the post slug from the URL
   const path = window.location.pathname;
   const slug = path.replace('/posts/', '').replace('/', '');
 
-  // Fetch the markdown file
   async function loadPost() {
     try {
       const response = await fetch(`/posts/${slug}.md`);
       if (!response.ok) throw new Error('Post not found');
       const text = await response.text();
-      
-      // Parse frontmatter
+
       const frontmatterMatch = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
       if (!frontmatterMatch) throw new Error('Invalid post format');
-      
+
       const frontmatter = frontmatterMatch[1];
       const content = frontmatterMatch[2];
-      
-      // Extract fields
+
       const title = frontmatter.match(/title:\s*"?([^"\n]+)"?/)?.[1] || '';
       const date = frontmatter.match(/date:\s*([^\n]+)/)?.[1] || '';
       const category = frontmatter.match(/category:\s*"?([^"\n]+)"?/)?.[1] || '';
       const image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
       const readtime = frontmatter.match(/readtime:\s*"?([^"\n]+)"?/)?.[1] || '5 min read';
-      
-      // Format date
+
       const dateObj = new Date(date);
       const formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
-      
-      // Update page
+
       document.title = `${title} — EVClear`;
       document.getElementById('article-title').textContent = title;
       document.getElementById('article-tag').textContent = category;
       document.getElementById('article-date').textContent = formattedDate;
       document.getElementById('article-readtime').textContent = readtime;
-      
+
       if (image) {
         document.getElementById('article-img').src = image;
         document.getElementById('article-img').alt = title;
         document.getElementById('article-img-container').style.display = 'block';
       }
-      
-      // Render markdown with HTML enabled
+
       const renderer = new marked.Renderer();
       document.getElementById('article-content').innerHTML = marked.parse(content, { renderer });
-      
-      // Show article
+
+      // Initialize gallery sliders
+      document.querySelectorAll('.gallery-slider').forEach(slider => {
+        const track = slider.querySelector('.gallery-track');
+        const imgs = track.querySelectorAll('img');
+        const dots = slider.querySelectorAll('.gallery-dot');
+        let current = 0;
+        const total = imgs.length;
+
+        function goTo(n) {
+          current = (n + total) % total;
+          track.style.transform = `translateX(-${current * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        slider.querySelector('.gallery-prev')?.addEventListener('click', () => goTo(current - 1));
+        slider.querySelector('.gallery-next')?.addEventListener('click', () => goTo(current + 1));
+        dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+        goTo(0);
+      });
+
       document.getElementById('loading').style.display = 'none';
       document.getElementById('article-container').style.display = 'block';
-      
+
     } catch (error) {
       document.getElementById('loading').innerHTML = '<h2 style="color:var(--white)">Article not found</h2><p>This article may have moved. <a href="/" style="color:var(--neon)">Return to EVClear →</a></p>';
     }
