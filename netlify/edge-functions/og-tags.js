@@ -1,16 +1,15 @@
 export default async function handler(request, context) {
   const url = new URL(request.url);
-  
+
   if (!url.pathname.startsWith('/posts/')) {
     return context.next();
   }
 
   const slug = url.pathname.replace('/posts/', '').replace(/\/$/, '');
-  
+
   try {
-    const mdUrl = `${url.origin}/posts/${slug}.md`;
-    const mdRes = await fetch(mdUrl);
-    
+    const mdRes = await fetch(`https://raw.githubusercontent.com/padih4-hub/evclear/main/static/posts/${slug}.md`);
+
     let title = 'EVClear';
     let excerpt = 'Australian EV news and buying guides';
     let imageUrl = '';
@@ -23,7 +22,7 @@ export default async function handler(request, context) {
         title = fm.match(/title:\s*"?([^"\n]+)"?/)?.[1] || title;
         excerpt = fm.match(/excerpt:\s*"?([^"\n]+)"?/)?.[1] || excerpt;
         const image = fm.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
-        imageUrl = image.startsWith('http') ? image : image ? `${url.origin}${image}` : '';
+        imageUrl = image.startsWith('http') ? image : image ? `https://evclear.com.au${image}` : '';
       }
     }
 
