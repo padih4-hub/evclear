@@ -8,20 +8,24 @@ export default async function handler(request, context) {
   const slug = url.pathname.replace('/posts/', '').replace(/\/$/, '');
   
   try {
-    const mdUrl = new URL(`/posts/${slug}.md`, url.origin);
-    const mdRes = await fetch(mdUrl.toString());
+    const mdUrl = `${url.origin}/posts/${slug}.md`;
+    const mdRes = await fetch(mdUrl);
     
-    if (!mdRes.ok) return context.next();
-    
-    const text = await mdRes.text();
-    const frontmatterMatch = text.match(/^---\n([\s\S]*?)\n---/);
-    if (!frontmatterMatch) return context.next();
-    
-    const frontmatter = frontmatterMatch[1];
-    const title = frontmatter.match(/title:\s*"?([^"\n]+)"?/)?.[1] || 'EVClear';
-    const excerpt = frontmatter.match(/excerpt:\s*"?([^"\n]+)"?/)?.[1] || 'Australian EV news and buying guides';
-    const image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
-    const imageUrl = image.startsWith('http') ? image : `${url.origin}${image}`;
+    let title = 'EVClear';
+    let excerpt = 'Australian EV news and buying guides';
+    let imageUrl = '';
+
+    if (mdRes.ok) {
+      const text = await mdRes.text();
+      const frontmatterMatch = text.match(/^---\n([\s\S]*?)\n---/);
+      if (frontmatterMatch) {
+        const fm = frontmatterMatch[1];
+        title = fm.match(/title:\s*"?([^"\n]+)"?/)?.[1] || title;
+        excerpt = fm.match(/excerpt:\s*"?([^"\n]+)"?/)?.[1] || excerpt;
+        const image = fm.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
+        imageUrl = image.startsWith('http') ? image : image ? `${url.origin}${image}` : '';
+      }
+    }
 
     const response = await context.next();
     const html = await response.text();
@@ -43,7 +47,8 @@ export default async function handler(request, context) {
     );
 
     return new Response(injected, {
-      headers: { 'content-type': 'text/html' },
+      status: response.status,
+      headers: { 'content-type': 'text/html; charset=utf-8' },
     });
 
   } catch (e) {
