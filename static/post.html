@@ -210,13 +210,18 @@
       const category = frontmatter.match(/category:\s*"?([^"\n]+)"?/)?.[1] || '';
       const image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
 const readtime = frontmatter.match(/readtime:\s*"?([^"\n]+)"?/)?.[1] || '5 min read';
+      const excerpt = frontmatter.match(/excerpt:\s*"?([^"\n]+)"?/)?.[1] || '';
 const galleryMatch = frontmatter.match(/gallery:\n([\s\S]*?)(?=\n\w|\n---)/);
 const galleryImages = galleryMatch ? [...galleryMatch[1].matchAll(/- "?([^"\n]+)"?/g)].map(m => m[1]) : [];
-
-      const dateObj = new Date(date);
+ const dateObj = new Date(date);
       const formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
 
       document.title = `${title} — EVClear`;
+      document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+document.querySelector('meta[property="og:description"]').setAttribute('content', excerpt || '');
+document.querySelector('meta[property="og:image"]').setAttribute('content', image || '');
+document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
+document.querySelector('meta[name="twitter:image"]').setAttribute('content', image || '');
       document.getElementById('article-title').textContent = title;
       document.getElementById('article-tag').textContent = category;
       document.getElementById('article-date').textContent = formattedDate;
