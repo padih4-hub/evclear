@@ -201,7 +201,7 @@
       const title = frontmatter.match(/title:\s*"?([^"\n]+)"?/)?.[1] || '';
       const date = frontmatter.match(/date:\s*([^\n]+)/)?.[1] || '';
       const category = frontmatter.match(/category:\s*"?([^"\n]+)"?/)?.[1] || '';
-      onst image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
+      const image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
 const readtime = frontmatter.match(/readtime:\s*"?([^"\n]+)"?/)?.[1] || '5 min read';
 const galleryMatch = frontmatter.match(/gallery:\n([\s\S]*?)(?=\n\w|\n---)/);
 const galleryImages = galleryMatch ? [...galleryMatch[1].matchAll(/- "?([^"\n]+)"?/g)].map(m => m[1]) : [];
