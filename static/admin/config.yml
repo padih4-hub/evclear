@@ -1,10 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "static/images"
 public_folder: "/images"
-
 collections:
   - name: "posts"
     label: "Blog Posts"
@@ -16,6 +14,7 @@ collections:
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "select", options: ["Buying Guide", "Charging", "Incentives", "EV News", "Cost & Savings", "EV Models"]}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Gallery Images", name: "gallery", widget: "list", required: false, field: {label: "Image", name: "image", widget: "image"}}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Read Time", name: "readtime", widget: "string", default: "5 min read"}
       - {label: "Body", name: "body", widget: "markdown"}
