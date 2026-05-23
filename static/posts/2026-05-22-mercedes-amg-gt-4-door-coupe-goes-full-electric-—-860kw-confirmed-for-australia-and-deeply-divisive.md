@@ -4,6 +4,9 @@ title: Mercedes-AMG GT 4-Door Coupe Goes Full Electric — 860kW, Confirmed for
 date: 2026-05-22T23:41:17.891Z
 category: EV News
 image: /images/2027-mercedes-amg-gt-4-door-001-1080.jpg
+gallery:
+  - /images/26c0129_015.jpg
+  - /images/26c0129_019.jpg
 excerpt: Mercedes-AMG just revealed its first purpose-built electric performance
   car. 860kW, 0-100 in 2.1 seconds, 600kW charging, confirmed for Australia —
   and a design that's already splitting opinion.
@@ -61,12 +64,6 @@ It's a lot. Whether that's a lot of good or a lot of bad depends heavily on who 
 The design team has described it as "distinctly AMG" and a "masterpiece of engineering that heralds a new dimension in performance." The internet has been less diplomatic.
 
 The honest take is that it photographs differently depending on the angle and lighting. Some shots look genuinely striking. Others look like something that needs a second look to process. It's not boring — and for a $400,000-plus car, boring might actually be worse than polarising.
-
-![](/images/2027-mercedes-amg-gt-4-door-002-1080.jpg)
-
-![](/images/26c0129_015.jpg)
-
-![](/images/26c0129_019.jpg)
 
 - - -
 
