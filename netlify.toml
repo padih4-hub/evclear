@@ -22,6 +22,7 @@
   from = "/thank-you"
   to = "/thank-you.html"
   status = 200
+  
 [[edge_functions]]
   path = "/posts/*"
   function = "og-tags"
