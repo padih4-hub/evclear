@@ -5,10 +5,10 @@ date: 2026-05-22T23:41:17.891Z
 category: EV News
 image: ""
 gallery:
-  - /images/26c0129_015.jpg
-  - /images/26c0129_019.jpg
   - /images/2027-mercedes-amg-gt-4-door-001-1080.jpg
   - /images/2027-mercedes-amg-gt-4-door-002-1080.jpg
+  - /images/26c0129_015.jpg
+  - /images/26c0129_019.jpg
 excerpt: Mercedes-AMG just revealed its first purpose-built electric performance
   car. 860kW, 0-100 in 2.1 seconds, 600kW charging, confirmed for Australia —
   and a design that's already splitting opinion.
