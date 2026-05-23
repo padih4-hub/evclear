@@ -201,8 +201,10 @@
       const title = frontmatter.match(/title:\s*"?([^"\n]+)"?/)?.[1] || '';
       const date = frontmatter.match(/date:\s*([^\n]+)/)?.[1] || '';
       const category = frontmatter.match(/category:\s*"?([^"\n]+)"?/)?.[1] || '';
-      const image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
-      const readtime = frontmatter.match(/readtime:\s*"?([^"\n]+)"?/)?.[1] || '5 min read';
+      onst image = frontmatter.match(/image:\s*"?([^"\n]+)"?/)?.[1] || '';
+const readtime = frontmatter.match(/readtime:\s*"?([^"\n]+)"?/)?.[1] || '5 min read';
+const galleryMatch = frontmatter.match(/gallery:\n([\s\S]*?)(?=\n\w|\n---)/);
+const galleryImages = galleryMatch ? [...galleryMatch[1].matchAll(/- "?([^"\n]+)"?/g)].map(m => m[1]) : [];
 
       const dateObj = new Date(date);
       const formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -213,11 +215,42 @@
       document.getElementById('article-date').textContent = formattedDate;
       document.getElementById('article-readtime').textContent = readtime;
 
-      if (image) {
-        document.getElementById('article-img').src = image;
-        document.getElementById('article-img').alt = title;
-        document.getElementById('article-img-container').style.display = 'block';
-      }
+      if (galleryImages.length > 0) {
+  const container = document.getElementById('article-img-container');
+  if (galleryImages.length === 1) {
+    document.getElementById('article-img').src = galleryImages[0];
+    document.getElementById('article-img').alt = title;
+    container.style.display = 'block';
+  } else {
+    const track = galleryImages.map(src => `<img src="${src}" alt="${title}" style="min-width:100%;height:400px;object-fit:cover;border-radius:12px;margin:0;">`).join('');
+    const dots = galleryImages.map((_, i) => `<div class="gallery-dot${i===0?' active':''}" data-index="${i}"></div>`).join('');
+    container.innerHTML = `
+      <div class="gallery-slider">
+        <div class="gallery-track" style="display:flex;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);">${track}</div>
+        <button class="gallery-btn gallery-prev">&#8592;</button>
+        <button class="gallery-btn gallery-next">&#8594;</button>
+        <div class="gallery-dots">${dots}</div>
+      </div>`;
+    container.style.display = 'block';
+    const slider = container.querySelector('.gallery-slider');
+    const trackEl = slider.querySelector('.gallery-track');
+    const dotEls = slider.querySelectorAll('.gallery-dot');
+    let cur = 0;
+    const total = galleryImages.length;
+    function goTo(n) {
+      cur = (n + total) % total;
+      trackEl.style.transform = `translateX(-${cur * 100}%)`;
+      dotEls.forEach((d, i) => d.classList.toggle('active', i === cur));
+    }
+    slider.querySelector('.gallery-prev').addEventListener('click', () => goTo(cur - 1));
+    slider.querySelector('.gallery-next').addEventListener('click', () => goTo(cur + 1));
+    dotEls.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+  }
+} else if (image) {
+  document.getElementById('article-img').src = image;
+  document.getElementById('article-img').alt = title;
+  document.getElementById('article-img-container').style.display = 'block';
+}
 
       const renderer = new marked.Renderer();
       document.getElementById('article-content').innerHTML = marked.parse(content, { renderer });
