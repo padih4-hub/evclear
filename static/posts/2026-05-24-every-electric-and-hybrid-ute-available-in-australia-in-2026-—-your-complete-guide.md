@@ -1,6 +1,5 @@
 ---
-title: Every Electric and Hybrid Ute Available in Australia in 2026 — Your
-  Complete Guide
+title: Every Electric and Hybrid Ute Available in Australia in 2026
 date: 2026-05-24T11:39:31.530Z
 category: Buying Guide
 image: /images/51d3788a-10b0-4458-af1a-2a5986267471.png
