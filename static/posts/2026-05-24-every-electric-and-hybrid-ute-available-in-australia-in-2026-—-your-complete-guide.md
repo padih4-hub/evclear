@@ -3,6 +3,7 @@ title: Every Electric and Hybrid Ute Available in Australia in 2026 — Your
   Complete Guide
 date: 2026-05-24T11:39:31.530Z
 category: Buying Guide
+image: /images/51d3788a-10b0-4458-af1a-2a5986267471.png
 excerpt: Utes are Australia's best selling vehicles but the electric and hybrid
   options are still limited. Here's every electrified ute available right now
   and what's coming soon.
