@@ -181,9 +181,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://evclear.com.au/posts/2026-05-26-ferrari-luce-%E2%80%94-the-first-electric-ferrari-is-here-with-a-different-look</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://evclear.com.au/disclaimer</loc>
