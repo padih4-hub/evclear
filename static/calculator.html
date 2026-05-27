@@ -1158,6 +1158,27 @@
       body: JSON.stringify({email}),
     }).catch(() => {});
   }
+  function submitInlineQuote() {
+  const name = document.getElementById('inline-name').value.trim();
+  const phone = document.getElementById('inline-phone').value.trim();
+  const email = document.getElementById('gate-email').value.trim();
+  const evModel = document.getElementById('ev-model').selectedOptions[0]?.text || 'Not selected';
+  const state = document.getElementById('state').value || 'Not selected';
+
+  if (!name || !phone) {
+    alert('Please enter your name and phone number.');
+    return;
+  }
+
+  fetch('/.netlify/functions/subscribe', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({email, name, phone, tags: ['quote-request']}),
+  }).catch(() => {});
+
+  document.getElementById('inline-success').style.display = 'block';
+  document.querySelector('[onclick="submitInlineQuote()"]').style.display = 'none';
+}
   function submitQuoteRequest() {
     const name = document.getElementById('quote-name').value.trim();
     const phone = document.getElementById('quote-phone').value.trim();
