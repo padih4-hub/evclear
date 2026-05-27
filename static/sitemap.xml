@@ -191,6 +191,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://evclear.com.au/posts/2026-05-27-honda-super-one-coming-to-australia-%E2%80%94-what-we-know-about-hondas-first-ev</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
