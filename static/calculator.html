@@ -1132,9 +1132,7 @@
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
-      const evModel = document.getElementById('ev-model').selectedOptions[0]?.text || 'Not selected';
-const state = document.getElementById('state').value || 'Not selected';
-body: JSON.stringify({email, name, phone, tags: ['quote-request'], evModel, state}),
+      body: JSON.stringify({email, name, phone, tags: ['quote-request']}),
     }).catch(() => {});
 
     document.getElementById('inline-name').style.display = 'none';
