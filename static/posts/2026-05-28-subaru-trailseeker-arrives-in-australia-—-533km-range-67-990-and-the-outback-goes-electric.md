@@ -1,6 +1,5 @@
 ---
-title: Subaru Trailseeker Arrives in Australia — 533km Range, $67,990 and the
-  Outback Goes Electric
+title: Subaru Trailseeker Lands in Australia — 533km Range from $67,990
 date: 2026-05-28T07:39:35.746Z
 category: EV Models
 image: /images/2026_subaru_trailerseeker_22.jpg
