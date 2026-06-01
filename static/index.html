@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta name="commission-factory-verification" content="ba198e74c54a47b08ad9ec1f4f568586" />
+<head>
+<meta name="commission-factory-verification" content="ba198e74c54a47b08ad9ec1f4f568586" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK28R0J0YM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-gtag('config', 'G-YK28R0J0YM');
+  gtag('config', 'G-YK28R0J0YM');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EVClear — Australia's Electric Vehicle Resource</title>
-<meta name="description" content="Unbiased guides, real cost breakdowns, and expert advice for Australians buying their first — or next — electric vehicle.">
+<title>EVClear — Australia's EV Savings and Buying Platform</title>
+<meta name="description" content="Australia's most trusted EV savings platform. Calculate exactly what you'll save switching to an electric vehicle — fuel costs, FBT exemptions, novated lease savings, and state incentives.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -37,6 +38,8 @@ gtag('config', 'G-YK28R0J0YM');
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 400; transition: color 0.2s; }
   .nav-links a:hover { color: var(--neon); }
   .nav-cta { background: var(--neon) !important; color: var(--dark) !important; padding: 8px 20px; border-radius: 6px; font-weight: 500 !important; }
+
+  /* HERO */
   .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(168,255,120,0.07) 0%, transparent 70%); }
   .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(168,255,120,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(168,255,120,0.03) 1px, transparent 1px); background-size: 60px 60px; }
@@ -47,18 +50,30 @@ gtag('config', 'G-YK28R0J0YM');
   h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05; letter-spacing: -2px; color: var(--white); margin-bottom: 24px; }
   h1 em { font-style: normal; color: var(--neon); }
   .hero-sub { font-size: 1.15rem; color: var(--muted); max-width: 520px; margin-bottom: 48px; line-height: 1.8; }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary { background: var(--neon); color: var(--dark); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 0 32px rgba(168,255,120,0.25); }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn-primary { background: var(--neon); color: var(--dark); padding: 16px 36px; border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 0 32px rgba(168,255,120,0.25); font-family: 'Syne', sans-serif; }
   .btn-primary:hover { box-shadow: 0 0 48px rgba(168,255,120,0.4); transform: translateY(-1px); }
-  .btn-secondary { background: transparent; color: var(--text); padding: 14px 32px; border-radius: 8px; font-size: 0.95rem; text-decoration: none; border: 1px solid var(--border); transition: all 0.2s; }
+  .btn-secondary { background: transparent; color: var(--text); padding: 16px 32px; border-radius: 8px; font-size: 0.95rem; text-decoration: none; border: 1px solid var(--border); transition: all 0.2s; }
   .btn-secondary:hover { border-color: var(--neon); color: var(--neon); }
+  .hero-note { font-size: 0.8rem; color: var(--muted); margin-top: 16px; }
   .hero-stats { display: flex; gap: 48px; margin-top: 72px; padding-top: 48px; border-top: 1px solid var(--border); }
   .stat-num { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.8rem; color: var(--neon); line-height: 1; margin-bottom: 4px; }
   .stat-label { font-size: 0.82rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* CALCULATOR CTA BAND */
+  .calc-band { background: linear-gradient(135deg, rgba(168,255,120,0.12), rgba(168,255,120,0.04)); border-top: 1px solid rgba(168,255,120,0.2); border-bottom: 1px solid rgba(168,255,120,0.2); padding: 64px 48px; text-align: center; }
+  .calc-band h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--white); margin-bottom: 16px; letter-spacing: -1px; }
+  .calc-band p { color: var(--muted); font-size: 1rem; max-width: 480px; margin: 0 auto 36px; line-height: 1.8; }
+  .calc-features { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+  .calc-feature { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text); }
+  .calc-feature::before { content: '✓'; color: var(--neon); font-weight: 700; }
+
   section { padding: 100px 48px; }
   .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--neon); font-weight: 500; margin-bottom: 16px; }
   h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--white); letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
   .section-intro { color: var(--muted); font-size: 1rem; max-width: 480px; margin-bottom: 56px; }
+
+  /* ARTICLES */
   .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .article-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: all 0.3s; display: flex; flex-direction: column; }
   .article-card:hover { border-color: rgba(168,255,120,0.3); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
@@ -73,6 +88,8 @@ gtag('config', 'G-YK28R0J0YM');
   .view-all-wrap { text-align: center; margin-top: 40px; }
   .view-all { display: inline-flex; align-items: center; gap: 8px; color: var(--neon); text-decoration: none; font-size: 0.9rem; font-weight: 500; border: 1px solid var(--border); padding: 12px 24px; border-radius: 8px; transition: all 0.2s; }
   .view-all:hover { border-color: var(--neon); background: rgba(168,255,120,0.05); }
+
+  /* GUIDES */
   .guides-section { background: var(--dark2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .guides-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
   .guide-card { background: var(--dark2); padding: 36px 32px; text-decoration: none; transition: background 0.2s; border-right: 1px solid var(--border); }
@@ -82,7 +99,9 @@ gtag('config', 'G-YK28R0J0YM');
   .guide-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--white); margin-bottom: 8px; line-height: 1.3; }
   .guide-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
   .guide-arrow { display: inline-block; margin-top: 16px; font-size: 0.8rem; color: var(--neon); font-weight: 500; }
-  .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+  /* RESOURCES */
+  .resources-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .resource-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden; }
   .resource-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--neon), transparent); opacity: 0; transition: opacity 0.3s; }
   .resource-card:hover::before { opacity: 1; }
@@ -92,6 +111,19 @@ gtag('config', 'G-YK28R0J0YM');
   .resource-desc { font-size: 0.87rem; color: var(--muted); margin-bottom: 24px; line-height: 1.7; }
   .resource-price { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--neon); }
   .resource-price span { font-size: 0.8rem; color: var(--muted); font-weight: 300; font-family: 'DM Sans', sans-serif; }
+
+  /* ABOUT / FOUNDER */
+  .about-section { background: var(--dark2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 960px; }
+  .about-text h2 { margin-bottom: 24px; }
+  .about-text p { color: var(--muted); font-size: 1rem; line-height: 1.9; margin-bottom: 16px; }
+  .about-text p strong { color: var(--text); }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .about-stat { background: var(--dark3); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+  .about-stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2rem; color: var(--neon); line-height: 1; margin-bottom: 6px; }
+  .about-stat-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* EMAIL */
   .email-section { background: var(--dark2); border-top: 1px solid var(--border); }
   .email-inner { max-width: 560px; margin: 0 auto; text-align: center; }
   .email-form { display: flex; gap: 12px; margin-top: 36px; }
@@ -101,6 +133,8 @@ gtag('config', 'G-YK28R0J0YM');
   .email-btn { background: var(--neon); color: var(--dark); border: none; padding: 14px 28px; border-radius: 8px; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
   .email-btn:hover { opacity: 0.85; }
   .email-note { font-size: 0.78rem; color: var(--muted); margin-top: 16px; }
+
+  /* FOOTER */
   footer { padding: 64px 48px 40px; border-top: 1px solid var(--border); }
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
   .footer-brand p { font-size: 0.88rem; color: var(--muted); max-width: 280px; margin-top: 16px; line-height: 1.7; }
@@ -111,18 +145,22 @@ gtag('config', 'G-YK28R0J0YM');
   .footer-col ul li a:hover { color: var(--neon); }
   .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid var(--border); }
   .footer-bottom p { font-size: 0.82rem; color: var(--muted); }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   .hero-content > * { animation: fadeUp 0.6s ease forwards; opacity: 0; }
   .hero-badge { animation-delay: 0.1s; }
   h1 { animation-delay: 0.2s; }
   .hero-sub { animation-delay: 0.3s; }
   .hero-actions { animation-delay: 0.4s; }
+  .hero-note { animation-delay: 0.45s; }
   .hero-stats { animation-delay: 0.5s; }
+
   @media (max-width: 768px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
     section { padding: 64px 24px; }
     .hero { padding: 100px 24px 64px; }
+    .calc-band { padding: 48px 24px; }
     h1 { font-size: 2.4rem; letter-spacing: -1px; }
     .articles-grid { grid-template-columns: 1fr; }
     .guides-grid { grid-template-columns: 1fr 1fr; }
@@ -130,6 +168,8 @@ gtag('config', 'G-YK28R0J0YM');
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .hero-stats { gap: 32px; }
     .email-form { flex-direction: column; }
+    .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .calc-features { gap: 16px; }
   }
 </style>
 </head>
@@ -146,36 +186,79 @@ gtag('config', 'G-YK28R0J0YM');
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-badge">🇦🇺 Built for Australian EV Buyers</div>
-    <h1>You Could Be Overpaying <em>$5,000–$15,000</em> on Your Next EV</h1>
-    <p class="hero-sub">Most Australians don't know what they actually qualify for. State incentives, FBT exemptions, novated lease savings — our free calculator shows your exact numbers in under 2 minutes.</p>
+    <div class="hero-badge">🇦🇺 Australia's EV Savings Platform</div>
+    <h1>Know <em>Exactly</em> What an EV Will Cost You Before You Buy</h1>
+    <p class="hero-sub">Fuel savings, FBT exemptions, novated lease benefits, state incentives — our free calculator shows your personalised numbers in under 2 minutes. 251 models across 43 brands.</p>
     <div class="hero-actions">
-      <a href="/calculator" class="btn-primary">Calculate My Savings →</a>
+      <a href="/calculator" class="btn-primary">Calculate My EV Savings →</a>
+      <a href="#blog" class="btn-secondary">Read the Latest News</a>
     </div>
+    <p class="hero-note">Free. No sign up required to get started.</p>
     <div class="hero-stats">
-      <div><div class="stat-num">244</div><div class="stat-label">EV Models Covered</div></div>
+      <div><div class="stat-num">251</div><div class="stat-label">EV Models Covered</div></div>
+      <div><div class="stat-num">44+</div><div class="stat-label">In-Depth Articles</div></div>
       <div><div class="stat-num">8</div><div class="stat-label">States & Territories</div></div>
-      <div><div class="stat-num">$0</div><div class="stat-label">To Get Started</div></div>
     </div>
   </div>
 </section>
 
+<!-- CALCULATOR CTA BAND -->
+<div class="calc-band">
+  <h2>The Calculator That Shows Your <em style="color:var(--neon);font-style:normal;">Real</em> EV Cost</h2>
+  <p>Most EV sites show you specs. We show you what it actually costs you — after every saving, incentive, and tax benefit is factored in.</p>
+  <div class="calc-features">
+    <div class="calc-feature">Fuel savings vs your current car</div>
+    <div class="calc-feature">FBT exemption on novated lease</div>
+    <div class="calc-feature">State incentives included</div>
+    <div class="calc-feature">Exact breakeven month</div>
+    <div class="calc-feature">251 EV models</div>
+  </div>
+  <a href="/calculator" class="btn-primary">Try the Free Calculator →</a>
+</div>
+
+<!-- BLOG -->
 <section id="blog">
   <div class="section-label">Latest from the blog</div>
   <h2>What Aussies are reading</h2>
   <p class="section-intro">Real information for real EV buyers. No sponsored fluff, no dealer spin.</p>
   <div class="articles-grid" id="articles-grid">
-    <p style="color:var(--muted)">Loading articles...</p>
+    <!-- Hardcoded fallback for SEO — replaced by JS when loaded -->
+    <a href="/posts/2026-05-31-mg4x-%E2%80%94-a-20-500-electric-suv-australia-should-be-watching" class="article-card">
+      <div class="article-img"><img src="/images/ev-transport.jpg" alt="MG4X electric SUV Australia" loading="lazy"></div>
+      <div class="article-body">
+        <div class="article-tag">EV News</div>
+        <div class="article-title">MG4X — A $20,500 Electric SUV Australia Should Be Watching</div>
+        <div class="article-meta">5 min read</div>
+      </div>
+    </a>
+    <a href="/posts/2026-05-28-subaru-trailseeker-lands-in-australia-%E2%80%94-533km-range-from-67-990" class="article-card">
+      <div class="article-img"><img src="/images/ev-transport.jpg" alt="Subaru Trailseeker Australia" loading="lazy"></div>
+      <div class="article-body">
+        <div class="article-tag">EV Models</div>
+        <div class="article-title">Subaru Trailseeker Lands in Australia — 533km Range from $67,990</div>
+        <div class="article-meta">5 min read</div>
+      </div>
+    </a>
+    <a href="/posts/2026-05-28-rz-slashes-prices-by-up-to-42-000-%E2%80%94-and-now-it-qualifies-for-the-fbt-exemption" class="article-card">
+      <div class="article-img"><img src="/images/ev-transport.jpg" alt="Lexus RZ price cut Australia" loading="lazy"></div>
+      <div class="article-body">
+        <div class="article-tag">EV News</div>
+        <div class="article-title">Lexus RZ Slashes Prices by Up to $42,000 and Now Qualifies for the FBT Exemption</div>
+        <div class="article-meta">5 min read</div>
+      </div>
+    </a>
   </div>
   <div class="view-all-wrap">
-    <a href="/blog.html" class="view-all">View all articles →</a>
+    <a href="/blog.html" class="view-all">View all 44 articles →</a>
   </div>
 </section>
 
+<!-- GUIDES -->
 <section id="guides" class="guides-section">
   <div style="margin-bottom: 56px;">
     <div class="section-label">EV Guides</div>
@@ -185,16 +268,17 @@ gtag('config', 'G-YK28R0J0YM');
   <div class="guides-grid">
     <a href="/posts/2026-04-30-how-to-buy-an-ev-in-australia-a-step-by-step-guide-for-2026" class="guide-card"><span class="guide-icon">🚗</span><div class="guide-title">How to Buy an EV in Australia</div><div class="guide-desc">From shortlisting models to signing the contract — your complete purchase roadmap.</div><span class="guide-arrow">Read guide →</span></a>
     <a href="/posts/2026-04-29-every-government-ev-rebate-and-incentive-in-australia-2026-guide" class="guide-card"><span class="guide-icon">🏛️</span><div class="guide-title">State Rebates Explained</div><div class="guide-desc">QLD, NSW, VIC, SA, WA — every incentive, eligibility requirement, and how to claim.</div><span class="guide-arrow">Read guide →</span></a>
-    <a href="/posts/2026-04-30-understanding-ev-range-in-australia-what-the-numbers-actually-mean" class="guide-card"><span class="guide-icon">🔋</span><div class="guide-title">Understanding EV Range</div><div class="guide-desc">What the spec sheet doesn't tell you about real-world range in Australian conditions.</div><span class="guide-arrow">Read guide →</span></a>
+    <a href="/posts/2026-05-04-novated-lease-ev-australia-2026-how-it-works-what-you-save-and-what-to-watch-out-for" class="guide-card"><span class="guide-icon">💼</span><div class="guide-title">Novated Lease Complete Guide</div><div class="guide-desc">How the FBT exemption works, what you save by income bracket, and what to watch out for.</div><span class="guide-arrow">Read guide →</span></a>
     <a href="/posts/2026-04-30-ev-running-costs-vs-petrol-the-real-numbers-for-australian-drivers" class="guide-card"><span class="guide-icon">⚙️</span><div class="guide-title">EV Running Costs vs Petrol</div><div class="guide-desc">A real total cost of ownership comparison using Australian electricity and fuel prices.</div><span class="guide-arrow">Read guide →</span></a>
   </div>
 </section>
 
+<!-- RESOURCES -->
 <section id="resources">
   <div class="section-label">Resources & Tools</div>
   <h2>Cut through the confusion</h2>
   <p class="section-intro">Practical tools and guides you can use right now before you buy.</p>
-  <div class="resources-grid" style="grid-template-columns: repeat(2, 1fr);">
+  <div class="resources-grid">
     <a href="https://buy.stripe.com/3cIeVc7kM6TG5oagbLfjG00" class="resource-card">
       <span class="resource-icon">📋</span>
       <div class="resource-title">Australian EV Buyer's Guide 2026</div>
@@ -222,6 +306,39 @@ gtag('config', 'G-YK28R0J0YM');
   </div>
 </section>
 
+<!-- ABOUT / FOUNDER -->
+<section id="about" class="about-section">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-label">About EVClear</div>
+      <h2>Built by an Aussie frustrated with confusing EV information</h2>
+      <p>My name is Padi. I built EVClear because when I started researching EVs, I couldn't find a single Australian resource that gave me straight answers about what switching would actually cost me.</p>
+      <p>Every site was either written for the US market, full of sponsored content, or buried in jargon. <strong>I wanted real numbers — fuel savings, FBT exemptions, novated lease benefits — for my actual situation in Queensland.</strong></p>
+      <p>So I built the calculator I wished existed, and started writing the guides I needed. EVClear is independent, ad-free, and built entirely around one question: what does an EV actually cost you?</p>
+      <p style="font-size:0.85rem;">No sponsored reviews. No dealer kickbacks. No affiliate spin.</p>
+    </div>
+    <div class="about-stats">
+      <div class="about-stat">
+        <div class="about-stat-num">44+</div>
+        <div class="about-stat-label">Articles Published</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">251</div>
+        <div class="about-stat-label">EV Models in Calculator</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">1,800+</div>
+        <div class="about-stat-label">Weekly Readers</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">135+</div>
+        <div class="about-stat-label">Email Subscribers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
 <section id="newsletter" class="email-section">
   <div class="email-inner">
     <div class="section-label">Free Download</div>
@@ -237,23 +354,14 @@ gtag('config', 'G-YK28R0J0YM');
   </div>
 </section>
 
-<section id="about">
-  <div style="max-width: 640px;">
-    <div class="section-label">About EVClear</div>
-    <h2>Built for Australian EV buyers</h2>
-    <p style="color: var(--muted); margin-bottom: 24px; font-size: 1rem; line-height: 1.9;">EVClear exists because buying an EV in Australia is genuinely confusing. Rebates vary by state, charging infrastructure is still developing, and most online information is written for the US or UK market.</p>
-    <p style="color: var(--muted); font-size: 1rem; line-height: 1.9;">We cut through the noise with honest, Australia-specific research. No sponsored reviews. No dealer kickbacks. Just clear information to help you make the right call.</p>
-  </div>
-</section>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="/" class="logo">EV<span>Clear</span></a>
-      <p>Australia's most trusted resource for electric vehicle buyers. Honest guides, real data, zero spin.</p>
+      <p>Australia's EV savings platform. Honest guides, real data, zero spin. Built in Brisbane for Australian buyers.</p>
     </div>
     <div class="footer-col"><h4>Content</h4><ul><li><a href="/blog.html">Blog</a></li><li><a href="/#guides">EV Guides</a></li><li><a href="/#resources">Resources</a></li><li><a href="#about">About</a></li></ul></div>
-    <div class="footer-col"><h4>Guides</h4><ul><li><a href="/posts/2026-04-30-how-to-buy-an-ev-in-australia-a-step-by-step-guide-for-2026">Buying an EV</a></li><li><a href="/posts/2026-04-28-home-ev-charging-in-australia-what-you-need-what-it-costs-and-how-to-save-money">Charging Info</a></li><li><a href="/posts/2026-04-29-every-government-ev-rebate-and-incentive-in-australia-2026-guide">State Rebates</a></li><li><a href="/posts/2026-04-30-ev-running-costs-vs-petrol-the-real-numbers-for-australian-drivers">Running Costs</a></li></ul></div>
+    <div class="footer-col"><h4>Guides</h4><ul><li><a href="/posts/2026-04-30-how-to-buy-an-ev-in-australia-a-step-by-step-guide-for-2026">Buying an EV</a></li><li><a href="/posts/2026-04-28-home-ev-charging-in-australia-what-you-need-what-it-costs-and-how-to-save-money">Charging Info</a></li><li><a href="/posts/2026-04-29-every-government-ev-rebate-and-incentive-in-australia-2026-guide">State Rebates</a></li><li><a href="/posts/2026-05-04-novated-lease-ev-australia-2026-how-it-works-what-you-save-and-what-to-watch-out-for">Novated Lease</a></li></ul></div>
     <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="mailto:hello@evclear.com.au">Contact</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -270,6 +378,7 @@ gtag('config', 'G-YK28R0J0YM');
       const posts = await response.json();
       const grid = document.getElementById('articles-grid');
       const latest = posts.slice(0, 3);
+      if (latest.length === 0) return;
       grid.innerHTML = latest.map(post => `
         <a href="/posts/${post.slug}" class="article-card">
           <div class="article-img">
@@ -283,7 +392,7 @@ gtag('config', 'G-YK28R0J0YM');
         </a>
       `).join('');
     } catch (error) {
-      document.getElementById('articles-grid').innerHTML = '<p style="color:var(--muted)">Articles coming soon.</p>';
+      // Fallback hardcoded articles already in HTML — do nothing
     }
   }
   loadArticles();
