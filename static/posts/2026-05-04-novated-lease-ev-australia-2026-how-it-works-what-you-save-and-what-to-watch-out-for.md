@@ -196,6 +196,15 @@ What this means practically: if you're looking at an EV under $75k, you've got u
 
 - - -
 
+<div style="background:#1a1e19;border:1px solid rgba(168,255,120,0.2);border-radius:12px;padding:32px;margin:48px 0;text-align:center;">
+  <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:#a8ff78;font-weight:500;margin-bottom:12px;">EVClear Resource</p>
+  <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.5rem;color:#ffffff;margin-bottom:12px;">Want the full novated lease breakdown?</h3>
+  <p style="color:#7a8a76;font-size:0.95rem;line-height:1.7;margin-bottom:24px;">The EVClear Novated Lease Playbook covers everything in this article and more -- salary packaging explained, how to compare providers, the exact questions to ask your employer, and a full worked example by income bracket. 12 chapters, built for Australian buyers.</p>
+  <a href="https://buy.stripe.com/bJedR8awYfqc5oaaRrfjG01" style="background:#a8ff78;color:#0d0f0c;padding:14px 32px;border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block;">Get the Playbook for $27 →</a>
+</div>
+
+- - -
+
 **The Bottom Line**
 
 A novated lease on an eligible EV is still the single most effective way to buy an electric vehicle in Australia — if you're an employee with access to salary packaging.
