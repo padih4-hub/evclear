@@ -239,6 +239,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://evclear.com.au/posts/2026-06-07-hyundai-permanently-cuts-8-000-off-the-kona-electric-and-ioniq-5-in-australia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
