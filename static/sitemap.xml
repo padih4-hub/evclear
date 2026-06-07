@@ -249,6 +249,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://evclear.com.au/posts/2026-06-07-tesla-finally-has-v2l-in-australia-and-vehicle-to-grid-is-coming-too</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
