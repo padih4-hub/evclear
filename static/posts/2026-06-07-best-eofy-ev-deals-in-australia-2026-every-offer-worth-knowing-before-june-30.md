@@ -9,8 +9,6 @@ excerpt: 23 days until June 30. Here are every verified EV cashback, discount
   actually worth acting on.
 readtime: 6 min read
 ---
-You have 23 days left.
-
 June 30 is the hard deadline for most EOFY deals in Australia, and 2026 is shaping up to be the biggest year yet for end-of-financial-year EV discounts. Manufacturers are cutting prices, offering cashback, throwing in free chargers and lowering finance rates to hit volume targets before the books close.
 
 Here is every verified deal worth knowing about right now.
