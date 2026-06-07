@@ -3,7 +3,7 @@ title: China Has Overtaken Japan as Australia's Biggest Car Supplier and It Is
   Not Even Close Anymore
 date: 2026-06-07T11:08:07.824Z
 category: EV News
-image: /images/screenshot-2026-06-07-211754.png
+image: /images/51400e92-9b97-47f1-ac06-a4ca8510bfaa.png
 excerpt: For the first time since 1998, Japan is no longer Australia's biggest
   source of new cars. China took the top spot in February 2026 and has not
   looked back. Here is what is driving it and what it means for buyers.
