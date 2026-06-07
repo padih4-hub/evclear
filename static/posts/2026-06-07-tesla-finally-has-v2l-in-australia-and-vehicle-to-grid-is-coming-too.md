@@ -20,7 +20,7 @@ Vehicle to load, or V2L, lets you plug appliances directly into your EV and run 
 
 For Australian drivers this is genuinely useful. We camp, we road trip, we live in areas with unreliable power. Having a 3.3kW power source on wheels that you take everywhere anyway is a practical upgrade to daily life.
 
-The thing is, most major EVs in Australia have had this for years. Hyundai IONIQ 5, Kia EV6, BYD models, Ford Mustang Mach-E -- all of them have offered V2L as standard for some time. Tesla was one of the last holdouts.
+The thing is, most major EVs in Australia have had this for years. Hyundai IONIQ 5, Kia EV6, BYD models and Ford Mustang Mach-E have all offered V2L as standard for some time. Tesla was one of the last holdouts.
 
 That changed with the Model Y L.
 
@@ -28,9 +28,9 @@ That changed with the Model Y L.
 
 The 2026 Tesla Model Y L is the first Tesla in Australia to offer V2L capability. It supplies up to 3.3kW of power through an adaptor that plugs into the charge port.
 
-To put 3.3kW in perspective -- that is enough to run a small bar fridge, a laptop, phone chargers, lighting, and a portable speaker simultaneously. It is not enough to run an air conditioner or a full kettle, but for camping and outdoor use it covers most needs comfortably.
+To put 3.3kW in perspective, that is enough to run a small bar fridge, a laptop, phone chargers, lighting and a portable speaker simultaneously. It is not enough to run an air conditioner or a full kettle, but for camping and outdoor use it covers most needs comfortably.
 
-The Model Y L is priced from $74,900 before on-road costs and is the only Tesla variant in Australia currently offering V2L. It also has 681km of WLTP range, a 2+2+2 six seat layout, 250kW DC fast charging, and a five star ANCAP safety rating.
+The Model Y L is priced from $74,900 before on-road costs and is the only Tesla variant in Australia currently offering V2L. It also has 681km of WLTP range, a 2+2+2 six seat layout, 250kW DC fast charging and a five star ANCAP safety rating.
 
 **How it compares to the competition**
 
@@ -44,7 +44,7 @@ This is the more interesting development.
 
 Tesla has confirmed vehicle to grid technology is not far away in Australia. V2G goes a step further than V2L. Instead of just powering appliances, it lets you send energy from your car battery back to the electricity grid, earning money or offsetting your energy bill.
 
-Tesla is unlikely to participate in the existing ARENA-sponsored V2G pilot running through Amber, because it is developing its own V2G system. Tesla has hinted it could be considerably cheaper than rival offerings currently on the market.
+Tesla is unlikely to participate in the existing ARENA-sponsored V2G pilot running through Amber because it is developing its own V2G system. Tesla has hinted it could be considerably cheaper than rival offerings currently on the market.
 
 For Australian EV owners this is worth watching. If Tesla launches a competitive V2G product, the financial case for owning an EV gets even stronger. Your car becomes an asset that earns money while it sits in the driveway.
 
@@ -58,7 +58,7 @@ Want to see how any of these models compare on total cost including novated leas
 
 [Calculate your savings here](https://evclear.com.au/calculator)
 
-And if you want the full breakdown on how novated leasing works before talking to your employer, the EVClear Novated Lease Guide has everything you need.
+If you want the full breakdown on how novated leasing works before talking to your employer, the EVClear Novated Lease Guide has everything you need.
 
 [Read the novated lease guide](https://evclear.com.au/posts/2026-05-04-novated-lease-ev-australia-2026-how-it-works-what-you-save-and-what-to-watch-out-for)
 
@@ -74,10 +74,10 @@ For now the Model Y L is the only Tesla in Australia you can plug your camping f
 
 **Does the Tesla Model Y have V2L in Australia?** The standard Tesla Model Y does not have V2L in Australia. V2L is currently only available on the 2026 Tesla Model Y L, which was the first Tesla in Australia to offer vehicle to load capability.
 
-**How much power does Tesla V2L provide?** The Tesla Model Y L provides up to 3.3kW of power through a charge port adaptor. This is enough to run small appliances, power tools, camping gear, and electronics simultaneously.
+**How much power does Tesla V2L provide?** The Tesla Model Y L provides up to 3.3kW of power through a charge port adaptor. This is enough to run small appliances, power tools, camping gear and electronics simultaneously.
 
 **What is the difference between V2L and V2G?** V2L lets you power appliances directly from your EV battery. V2G lets you send energy back to the electricity grid, which can earn you money or offset your power bill. Tesla currently offers V2L in Australia and has confirmed V2G is coming.
 
-**Which EVs have V2L in Australia?** Several EVs offer V2L in Australia including the Hyundai IONIQ 5 at 3.6kW, Kia EV6 at 3.6kW, BYD Sealion 7 at 3.3kW, Ford Mustang Mach-E at 2.4kW, and now the Tesla Model Y L at 3.3kW.
+**Which EVs have V2L in Australia?** Several EVs offer V2L in Australia including the Hyundai IONIQ 5 at 3.6kW, Kia EV6 at 3.6kW, BYD Sealion 7 at 3.3kW, Ford Mustang Mach-E at 2.4kW and now the Tesla Model Y L at 3.3kW.
 
 **How much does the Tesla Model Y L cost in Australia?** The 2026 Tesla Model Y L starts at $74,900 before on-road costs. It is available in a single Premium Long Range AWD variant with 681km WLTP range and six seat capacity.
