@@ -1,5 +1,5 @@
 ---
-title: hina Has Overtaken Japan as Australia's Biggest Car Supplier
+title: China Has Overtaken Japan as Australia's Biggest Car Supplier
 date: 2026-06-07T11:08:07.824Z
 category: EV News
 image: /images/f9127535-a005-4485-9c2a-0f969cc5f6a0.png
