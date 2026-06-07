@@ -16,23 +16,6 @@ And by April, it wasn't even close anymore.
 
 Almost 36,000 passenger cars from China arrived in Australia in April 2026, well ahead of the 29,000 from Japan. In the first four months of 2026 alone, more than 100,000 Chinese-built vehicles landed here. That's a 51 percent increase on the same period last year.
 
-This isn't a blip. It's a structural shift in the Australian car market, and it's being driven almost entirely by electric vehicles.
-
-<div style="background:#141714;border:1px solid rgba(168,255,120,0.15);border-radius:16px;padding:32px;margin:40px 0;">
-  <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:#a8ff78;font-weight:500;margin-bottom:4px;">Australia vehicle imports by country</p>
-  <p style="font-size:0.8rem;color:#7a8a76;margin-bottom:28px;">Monthly deliveries — China vs Japan</p>
-
-  <div style="display:flex;flex-direction:column;gap:20px;">
-
-```
-
-```
-
-  </div>
-
-  <p style="font-size:0.72rem;color:#7a8a76;margin-top:20px;">Source: FCAI VFACTS data. February 2026 marks the first time China led Australia's vehicle imports since 1998.</p>
-</div>
-
 **The numbers behind the shift**
 
 In February 2026, when China first took the top spot, the breakdown looked like this:
