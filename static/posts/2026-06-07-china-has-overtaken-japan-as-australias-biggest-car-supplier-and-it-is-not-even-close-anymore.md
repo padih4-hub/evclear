@@ -20,62 +20,18 @@ This isn't a blip. It's a structural shift in the Australian car market, and it'
 
 <div style="background:#141714;border:1px solid rgba(168,255,120,0.15);border-radius:16px;padding:32px;margin:40px 0;">
   <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:#a8ff78;font-weight:500;margin-bottom:4px;">Australia vehicle imports by country</p>
-  <p style="font-size:0.8rem;color:#7a8a76;margin-bottom:24px;">Monthly deliveries 2024 to 2026 — China vs Japan</p>
-  <div style="position:relative;width:100%;height:280px;">
-    <canvas id="importChart" role="img" aria-label="Bar chart showing China overtaking Japan in Australian vehicle imports from 2024 to 2026">China overtook Japan in February 2026 with 22,362 vehicles vs Japan's 21,671.</canvas>
+  <p style="font-size:0.8rem;color:#7a8a76;margin-bottom:28px;">Monthly deliveries — China vs Japan</p>
+
+  <div style="display:flex;flex-direction:column;gap:20px;">
+
+```
+
+```
+
   </div>
-  <div style="display:flex;gap:20px;margin-top:16px;">
-    <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#7a8a76;"><span style="width:10px;height:10px;border-radius:2px;background:#a8ff78;display:inline-block;"></span>China</span>
-    <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#7a8a76;"><span style="width:10px;height:10px;border-radius:2px;background:#4a5568;display:inline-block;"></span>Japan</span>
-  </div>
-  <p style="font-size:0.72rem;color:#7a8a76;margin-top:12px;">Source: FCAI VFACTS data. Feb 2026 marks first time China led since 1998.</p>
+
+  <p style="font-size:0.72rem;color:#7a8a76;margin-top:20px;">Source: FCAI VFACTS data. February 2026 marks the first time China led Australia's vehicle imports since 1998.</p>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-
-<script>
-new Chart(document.getElementById('importChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Jan 25', 'Apr 25', 'Jul 25', 'Oct 25', 'Feb 26', 'Apr 26'],
-    datasets: [
-      {
-        label: 'China',
-        data: [13200, 14800, 16500, 18200, 22362, 36000],
-        backgroundColor: 'rgba(168,255,120,0.85)',
-        borderRadius: 4
-      },
-      {
-        label: 'Japan',
-        data: [28500, 27200, 25800, 24100, 21671, 29000],
-        backgroundColor: 'rgba(74,85,104,0.85)',
-        borderRadius: 4
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false }
-    },
-    scales: {
-      x: {
-        ticks: { color: '#7a8a76', font: { size: 11 } },
-        grid: { color: 'rgba(168,255,120,0.05)' }
-      },
-      y: {
-        ticks: {
-          color: '#7a8a76',
-          font: { size: 11 },
-          callback: (v) => v.toLocaleString()
-        },
-        grid: { color: 'rgba(168,255,120,0.05)' }
-      }
-    }
-  }
-});
-</script>
 
 **The numbers behind the shift**
 
