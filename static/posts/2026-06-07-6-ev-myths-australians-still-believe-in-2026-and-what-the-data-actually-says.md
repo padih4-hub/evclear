@@ -2,6 +2,7 @@
 title: 6 EV Myths Australians Still Believe in 2026 (And What the Data Actually Says)
 date: 2026-06-07T09:43:19.010Z
 category: EV News
+image: /images/73e1aa3e-62d8-455f-a5c3-d784768e1899.png
 gallery:
   - /images/73e1aa3e-62d8-455f-a5c3-d784768e1899.png
 excerpt: "A Victorian Parliament inquiry just confirmed what many Aussie buyers
