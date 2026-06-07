@@ -244,6 +244,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://evclear.com.au/posts/2026-06-07-china-has-overtaken-japan-as-australias-biggest-car-supplier-and-it-is-not-even-close-anymore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://evclear.com.au/privacy</loc>
     <changefreq>yearly</changefreq>
