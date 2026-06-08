@@ -38,10 +38,8 @@
   .nav-links a:hover { color: var(--neon); }
   .nav-cta { background: var(--neon) !important; color: var(--dark) !important; padding: 8px 20px; border-radius: 6px; font-weight: 500 !important; }
 
-  /* Shared max-width wrapper */
   .container { max-width: 1100px; margin: 0 auto; padding: 0 64px; }
 
-  /* Hero */
   .page-hero { padding: 140px 0 72px; }
   .page-hero .container { max-width: 800px; margin: 0 auto; }
   .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--neon); font-weight: 500; margin-bottom: 16px; }
@@ -49,7 +47,6 @@
   h1 em { font-style: normal; color: var(--neon); }
   .lead { font-size: 1.15rem; color: var(--muted); line-height: 1.8; }
 
-  /* Stats bar — full width under hero */
   .stats-bar { padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 56px 0; }
   .stats-bar .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
   .stat-item { text-align: center; padding: 16px 24px; border-right: 1px solid var(--border); }
@@ -57,24 +54,25 @@
   .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2.4rem; color: var(--neon); line-height: 1; margin-bottom: 8px; }
   .stat-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
 
-  /* Story section */
   .story { padding: 0 0 80px; }
   .story .container { max-width: 720px; margin: 0 auto; }
   .story p { color: var(--muted); font-size: 1.05rem; line-height: 1.9; margin-bottom: 22px; }
   .story p strong { color: var(--text); font-weight: 500; }
   .story h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--white); margin-bottom: 16px; margin-top: 48px; }
 
-  /* Principles */
+  .ai-note { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--neon); border-radius: 8px; padding: 20px 24px; margin: 40px 0; }
+  .ai-note p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 0; }
+  .ai-note strong { color: var(--text); }
+
   .principles { padding: 80px 0; border-top: 1px solid var(--border); }
   .principles-header { margin-bottom: 48px; }
   .principles-header h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.9rem; color: var(--white); letter-spacing: -0.5px; margin-top: 12px; }
-  .principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .principles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
   .principle-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
   .principle-icon { font-size: 1.5rem; margin-bottom: 16px; }
   .principle-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--white); margin-bottom: 10px; }
   .principle-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
 
-  /* CTA */
   .contact-cta { background: var(--dark2); border-top: 1px solid var(--border); padding: 96px 0; text-align: center; }
   .contact-cta h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.9rem; color: var(--white); margin-bottom: 16px; }
   .contact-cta p { color: var(--muted); margin-bottom: 36px; font-size: 1.05rem; }
@@ -116,7 +114,7 @@
   <div class="container">
     <div class="section-label">About EVClear</div>
     <h1>Built by an Aussie who couldn't find <em>straight answers</em></h1>
-    <p class="lead">EVClear exists because buying an EV in Australia is genuinely confusing — and most online resources make it worse. We fix that.</p>
+    <p class="lead">EVClear exists because buying an EV in Australia is genuinely confusing and most online resources make it worse. We fix that.</p>
   </div>
 </div>
 
@@ -124,7 +122,7 @@
 <div class="stats-bar">
   <div class="container">
     <div class="stat-item">
-      <div class="stat-num">44+</div>
+      <div class="stat-num">51+</div>
       <div class="stat-label">Articles published</div>
     </div>
     <div class="stat-item">
@@ -132,7 +130,7 @@
       <div class="stat-label">EV models in calculator</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">1,800+</div>
+      <div class="stat-num">2,400+</div>
       <div class="stat-label">Weekly readers</div>
     </div>
     <div class="stat-item">
@@ -148,11 +146,18 @@
     <p>My name is Padi. I'm based in Brisbane and I built EVClear after spending weeks trying to research an EV purchase and coming up empty every time I needed a real answer.</p>
     <p>Every site I found was either written for the US or UK market, loaded with affiliate links pushing specific products, or so buried in specs that it was impossible to understand what switching to an EV would actually cost me day-to-day.</p>
     <p><strong>I wanted to know three things: How much will I save on fuel? What do I actually qualify for as a Queensland buyer? And does the novated lease FBT exemption apply to me?</strong></p>
-    <p>Nobody had a clear Australian answer. So I built EVClear — starting with the savings calculator I wished existed, and growing it into a full EV resource built specifically for the Australian market.</p>
+    <p>Nobody had a clear Australian answer. So I built EVClear, starting with the savings calculator I wished existed and growing it into a full EV resource built specifically for the Australian market.</p>
 
     <h2>What EVClear covers</h2>
-    <p>Every article, guide, and tool on EVClear is written for Australian buyers — with Australian fuel prices, Australian state incentives, Australian electricity costs, and the Australian FBT framework. Not adapted from overseas content. Built from scratch for this market.</p>
+    <p>Every article, guide, and tool on EVClear is written for Australian buyers with Australian fuel prices, Australian state incentives, Australian electricity costs, and the Australian FBT framework. Not adapted from overseas content. Built from scratch for this market.</p>
     <p>The calculator covers 251 EV models across 43 brands available in Australia, calculates fuel savings against your actual driving habits, applies your state's current incentives, and shows the full novated lease FBT saving by income bracket.</p>
+
+    <h2>A note on how EVClear is written</h2>
+    <p>EVClear uses AI as a research and writing assistant to help cover the Australian EV market faster and more thoroughly than one person could alone. Every article is fact checked and reviewed by me before it goes live. If something is wrong, I want to know about it and I will fix it same day. That is a promise.</p>
+
+    <div class="ai-note">
+      <p><strong>Spot an error?</strong> EVClear is built on accuracy. If something in an article does not look right, email us at hello@evclear.com.au or leave a comment and it will be fixed fast. No excuses, no defensiveness.</p>
+    </div>
   </div>
 </div>
 
@@ -161,13 +166,13 @@
   <div class="container">
     <div class="principles-header">
       <div class="section-label">How we operate</div>
-      <h2>Three things we never compromise on</h2>
+      <h2>Four things we never compromise on</h2>
     </div>
     <div class="principles-grid">
       <div class="principle-card">
         <div class="principle-icon">🚫</div>
         <div class="principle-title">No sponsored content</div>
-        <div class="principle-desc">No manufacturer pays to appear in our articles or calculator. Every recommendation is based on specs, price, and value — not who's paying us.</div>
+        <div class="principle-desc">No manufacturer pays to appear in our articles or calculator. Every recommendation is based on specs, price, and value, not who's paying us.</div>
       </div>
       <div class="principle-card">
         <div class="principle-icon">🇦🇺</div>
@@ -177,7 +182,12 @@
       <div class="principle-card">
         <div class="principle-icon">📊</div>
         <div class="principle-title">Real numbers only</div>
-        <div class="principle-desc">We show you what an EV actually costs after every saving is factored in — not manufacturer marketing figures. If the numbers don't stack up, we say so.</div>
+        <div class="principle-desc">We show you what an EV actually costs after every saving is factored in, not manufacturer marketing figures. If the numbers don't stack up, we say so.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon">🤖</div>
+        <div class="principle-title">Transparent about AI</div>
+        <div class="principle-desc">EVClear uses AI to research and write faster. Every article is reviewed by a human before publishing. If we get something wrong, we fix it fast and own it publicly.</div>
       </div>
     </div>
   </div>
@@ -187,7 +197,7 @@
 <div class="contact-cta">
   <div class="container">
     <h2>Get in touch</h2>
-    <p>Questions, feedback, or partnership enquiries — we'd love to hear from you.</p>
+    <p>Questions, feedback, or partnership enquiries, we'd love to hear from you.</p>
     <a href="/contact.html" class="btn-primary">Contact EVClear →</a>
   </div>
 </div>
