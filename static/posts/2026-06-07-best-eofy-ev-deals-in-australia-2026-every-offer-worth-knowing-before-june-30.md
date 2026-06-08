@@ -73,6 +73,13 @@ Here is every verified deal worth knowing about right now.
 <td style="padding:10px 12px;font-size:0.9rem;">e VITARA (first 100 pre-orders)</td>
 <td style="padding:10px 12px;font-size:0.9rem;">While stock lasts</td>
 </tr>
+
+<tr style="border-bottom:1px solid rgba(168,255,120,0.08);">
+<td style="padding:10px 12px;font-size:0.9rem;">Tesla</td>
+<td style="padding:10px 12px;font-size:0.9rem;">$3,000 trade-in bonus on Model 3 RWD / Long Range RWD. $2,000 trade-in bonus on Model Y RWD / Long Range AWD</td>
+<td style="padding:10px 12px;font-size:0.9rem;">Model 3 and Model Y</td>
+<td style="padding:10px 12px;font-size:0.9rem;">June 30, 2026</td>
+</tr>
 </tbody>
 </table>
 
