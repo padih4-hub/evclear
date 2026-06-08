@@ -2,6 +2,7 @@
 title: Petrol Prices Are Pushing Australians Into EVs Faster Than Anyone Expected
 date: 2026-06-08T10:15:30.416Z
 category: EV News
+image: /images/nguyen-minh-vljmvn5jaqa-unsplash.jpg
 excerpt: Petrol hit record prices, stations ran dry, and Australians started
   buying EVs at a rate nobody predicted. Here is the story behind the surge and
   what it means if you are thinking about switching.
