@@ -1,5 +1,5 @@
 ---
-title: Tesla Finally Has V2L in Australia and Vehicle to Grid Is Coming Too
+title: Tesla, V2L, Vehicle to Load, Model Y L, Australia 2026
 date: 2026-06-07T20:30:42.927Z
 category: EV News
 image: /images/3fa82543-daf8-4514-ac99-a4a0db2e444b.png
