@@ -28,7 +28,7 @@ That changed with the Model Y L.
 
 The 2026 Tesla Model Y L is the first Tesla in Australia to offer V2L capability. It supplies up to 3.3kW of power through an adaptor that plugs into the charge port.
 
-To put 3.3kW in perspective, that is enough to run a small bar fridge, a laptop, phone chargers, lighting and a portable speaker simultaneously. It is not enough to run an air conditioner or a full kettle, but for camping and outdoor use it covers most needs comfortably.
+To put 3.3kW in perspective, that is enough to run a camping fridge, boil a kettle, charge your devices, power lighting and run a small portable air conditioner all at the same time. A standard Australian kettle draws around 2,000 to 2,400 watts and a camping air conditioner typically draws 800 to 1,500 watts, both well within the 3.3kW output. The main limitation is running multiple high draw appliances simultaneously, but for typical camping and outdoor use 3.3kW covers almost everything you would need
 
 The Model Y L is priced from $74,900 before on-road costs and is the only Tesla variant in Australia currently offering V2L. It also has 681km of WLTP range, a 2+2+2 six seat layout, 250kW DC fast charging and a five star ANCAP safety rating.
 
