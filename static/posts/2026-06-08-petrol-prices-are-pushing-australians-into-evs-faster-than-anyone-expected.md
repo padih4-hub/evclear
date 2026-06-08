@@ -19,7 +19,7 @@ EV sales went through the roof.
 
 New EV sales in March 2026 hit 15,839 units. That is a 43.3 percent jump on February and an 88.9 percent increase compared to March 2025, according to <a href="https://zecar.com/reviews/used-ev-sales-doubled-march-2026-australia" style="color:`#a8ff78`;border-bottom:1px solid rgba(168,255,120,0.3);">data from the FCAI and Electric Vehicle Council</a>. The overall new car market was actually down 2.6 percent that same month, which makes the EV result even more remarkable.
 
-The used EV market was even wilder. And that momentum kept building -- by May 2026 new EV sales had climbed to 21,303 units with battery electrics hitting a record 20 percent market share.
+The used EV market was even wilder. That momentum kept building too. By May 2026 new EV sales had climbed to 21,303 units with battery electrics hitting a record 20 percent market share
 
 Used EV sales more than doubled in a single month, jumping from 3,176 units in February to 7,557 in March, according to the <a href="https://zecar.com/reviews/used-ev-sales-doubled-march-2026-australia" style="color:`#a8ff78`;border-bottom:1px solid rgba(168,255,120,0.3);">Australian Automotive Dealer Association</a>. Stock dropped 38 percent at the same time. Days of supply fell to 28.6 days. A balanced market normally sits between 60 and 90 days. Used EVs were selling faster than dealers could source them.
 
